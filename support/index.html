@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>دعم ما بعد البيع — السلطان تك</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050A1A;--panel:#0C1530;--line:rgba(255,255,255,.1);--tx:#E8ECF6;--mut:#8D97B5;--g1:#FFC53D;--g2:#FF8C00;--ok:#34D399;--bad:#F87171;--warn:#FBBF24}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 15px/1.7 Tajawal,Inter,system-ui,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:20px 16px 60px}
+h1{font-size:26px;font-weight:900;margin:8px 0 4px;background:linear-gradient(135deg,var(--g1),var(--g2));-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:18px;margin:0 0 12px}
+.sub{color:var(--mut);margin:0 0 20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:16px}
+label{display:block;font-size:13px;color:var(--mut);margin:10px 0 4px}
+input,select,textarea{width:100%;background:#070E24;color:var(--tx);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font:inherit}
+input:focus,select:focus,textarea:focus,button:focus-visible,summary:focus-visible{outline:2px solid var(--g1);outline-offset:2px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:600px){.row{grid-template-columns:1fr}}
+.btn{background:linear-gradient(135deg,var(--g1),var(--g2));color:#1a1000;border:0;border-radius:10px;padding:11px 18px;font:700 14px Tajawal,sans-serif;cursor:pointer}
+.btn.sec{background:transparent;color:var(--tx);border:1px solid var(--line)}
+.btn:disabled{opacity:.5;cursor:wait}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.chk{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
+.chk:last-child{border:0}
+.st-ok{color:var(--ok)}.st-bad{color:var(--bad)}.st-cors,.st-pending{color:var(--warn)}
+.tk{border:1px solid var(--line);border-radius:12px;padding:12px;margin-top:10px}
+.tk b{color:var(--g1)}
+.tk small{color:var(--mut);display:block}
+.pill{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:1px 10px;margin-inline-start:6px}
+details{border-bottom:1px solid var(--line);padding:10px 0}
+summary{cursor:pointer;font-weight:700}
+details p{color:var(--mut);margin:8px 0 0}
+.msg{margin-top:10px;font-size:14px;min-height:20px}
+.ver{display:flex;gap:10px;padding:6px 0;font-size:14px}
+.ver b{color:var(--g1);min-width:56px;font-family:Inter,sans-serif}
+@media(prefers-reduced-motion:no-preference){.card{transition:border-color .2s}.card:hover{border-color:rgba(255,197,61,.35)}}
+.sitenav{display:flex;justify-content:center;gap:8px;margin:0 0 18px;flex-wrap:wrap}
+.sitenav a{color:var(--mut);text-decoration:none;font-size:13px;font-weight:700;padding:6px 14px;border:1px solid var(--line);border-radius:999px}
+.sitenav a:hover{color:var(--g1);border-color:rgba(255,197,61,.4)}
+.sitenav a.on{color:#1a1000;background:linear-gradient(135deg,var(--g1),var(--g2));border-color:transparent}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>دعم ما بعد البيع</h1>
+  <p class="sub">افحص موقعك تلقائيًا، افتح تذكرة، أو ابحث في الأسئلة الشائعة. <span dir="ltr" style="font-family:Inter">v2.1.0</span></p>
+  <nav class="sitenav" aria-label="التنقل الرئيسي">
+    <a href="../">الرئيسية</a>
+    <a href="../app/">المولّد</a>
+    <a href="../guide/">الدليل</a>
+    <a href="./" class="on">الدعم</a>
+  </nav>
+
+
+  <section class="card" id="checker">
+    <h2>الفاحص الآلي</h2>
+    <label for="siteUrl">رابط الموقع (https فقط)</label>
+    <input id="siteUrl" type="url" dir="ltr" placeholder="https://example.netlify.app" autocomplete="off">
+    <div class="btns"><button class="btn" id="btnCheck" type="button">ابدأ الفحص</button></div>
+    <div id="checkMsg" class="msg" role="status"></div>
+    <div id="checkList"></div>
+    <div class="btns" id="checkActions" hidden>
+      <button class="btn sec" id="btnCopy" type="button">نسخ التقرير</button>
+      <button class="btn sec" id="btnShareReport" type="button">مشاركة واتساب</button>
+    </div>
+  </section>
+
+  <section class="card" id="ticketCard">
+    <h2>تذكرة دعم</h2>
+    <form id="ticketForm" name="sultan-support" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="sultan-support">
+      <div class="row">
+        <div><label for="tName">الاسم</label><input id="tName" name="name" required maxlength="60"></div>
+        <div><label for="tWA">واتساب (دولي بدون +)</label><input id="tWA" name="whatsapp" dir="ltr" inputmode="numeric" required maxlength="20"></div>
+      </div>
+      <div class="row">
+        <div><label for="tPkg">الباقة</label>
+          <select id="tPkg" name="packageType"><option>PWA</option><option>Store</option><option selected>Full</option></select></div>
+        <div><label for="tType">نوع المشكلة</label>
+          <select id="tType" name="issueType">
+            <option>التثبيت لا يعمل</option><option>الأيقونات لا تظهر</option><option>شريط المتصفح يظهر</option><option>التحديث لا يصل</option><option>نشر فشل</option>
+          </select></div>
+      </div>
+      <label for="tUrl">رابط الموقع</label>
+      <input id="tUrl" name="siteUrl" type="url" dir="ltr" placeholder="https://">
+      <label for="tDesc">الوصف</label>
+      <textarea id="tDesc" name="desc" rows="4" required maxlength="1000" placeholder="اشرح المشكلة بالتفصيل، متى ظهرت، وما الذي جربته..."></textarea>
+      <div class="btns"><button class="btn" id="btnSend" type="submit">إرسال التذكرة + رسالة واتساب</button></div>
+      <div id="tMsg" class="msg" role="status"></div>
+    </form>
+  </section>
+
+  <section class="card">
+    <h2>تذاكري <span class="pill" id="tCount">0</span></h2>
+    <label for="tFilter">بحث في التذاكر</label>
+    <input id="tFilter" placeholder="رقم التذكرة أو الرابط أو نوع المشكلة">
+    <div id="tList"></div>
+    <div class="btns"><button class="btn sec" id="btnClear" type="button">مسح كل التذاكر المحلية</button></div>
+    <p class="sub" style="margin:10px 0 0;font-size:13px">التذاكر محفوظة في متصفحك فقط (sultan_tickets) ولا تُرسل إلا عند الإرسال.</p>
+  </section>
+
+  <section class="card">
+    <h2>الأسئلة الشائعة</h2>
+    <input id="faqQ" placeholder="ابحث في الأسئلة..." aria-label="ابحث في الأسئلة">
+    <div id="faqList"></div>
+  </section>
+
+  <section class="card">
+    <h2>سجل التحديثات</h2>
+    <div class="ver"><b>v2.1.0</b><span>الحالي — الفاحص الآلي + تذاكر محفوظة محليًا + تتبع الحالة</span></div>
+    <div class="ver"><b>v2.0.5</b><span>تحسين توليد AssetLinks ودعم TWA</span></div>
+    <div class="ver"><b>v2.0.0</b><span>إعادة تصميم المولد بالكامل — ثيم داكن وزجاجي</span></div>
+  </section>
+
+  <section class="card">
+    <h2>تواصل مباشر</h2>
+    <div class="btns">
+      <a class="btn" id="waLink" target="_blank" rel="noopener" style="text-decoration:none">واتساب</a>
+      <a class="btn sec" id="mailLink" style="text-decoration:none">البريد</a>
+    </div>
+  </section>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var WA = "213775519021";            // رقم الدعم — عدّله هنا فقط
+  var MAIL = "support@sultantech.com";
+  var KEY = "sultan_tickets";
+  var STATUSES = ["مفتوحة", "قيد المعالجة", "مغلقة"];
+  var FAQ = [
+    ["التطبيق لا يثبت على أندرويد؟", "تأكد أنك تفتح الموقع عبر https وليس http. افحص وجود manifest.json ورابط الأيقونة 512x512. في كروم احذف بيانات الموقع وأعد المحاولة، ثم استخدم الفاحص الآلي."],
+    ["الأيقونات تظهر سوداء أو مكسورة؟", "غالبًا مسار الأيقونات خطأ أو ملف PNG غير صالح. تأكد أن /icons/icon-512x512.png موجود بخلفية غير شفافة، وأعد البناء من المولد."],
+    ["شريط عنوان Chrome لا يزال يظهر؟", "يعني أن display في manifest ليس standalone. اختر standalone في المولد وتأكد من theme_color و background_color. بعد النشر انتظر 5 دقائق ثم امسح الكاش."],
+    ["التحديث لا يصل للمستخدمين؟", "الـ Service Worker يخزن نسخة قديمة. أعد توليد الحزمة (كاش جديد pwa-{timestamp}). للمستخدم الحالي: يغلق التطبيق تمامًا ويفتحه مرتين."],
+    ["فشل النشر على Google Play؟", "تحقق من assetlinks.json في /.well-known/ وأن SHA256 صحيح (أضف بصمة Play App Signing أيضًا) وأن package name مطابق تمامًا."],
+    ["فقدت ملف الـ keystore؟", "لا يمكن استعادته. يلزم تطبيق جديد بـ package مختلف. احفظ android.keystore وكلمة المرور في مكان آمن خارج Git."]
+  ];
+  var $ = function (id) { return document.getElementById(id); };
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+
+  /* ---------- storage ---------- */
+  function load() { try { var a = JSON.parse(localStorage.getItem(KEY) || "[]"); return Array.isArray(a) ? a : []; } catch (e) { return []; } }
+  function save(a) { try { localStorage.setItem(KEY, JSON.stringify(a)); return true; } catch (e) { return false; } }
+
+  /* ---------- checker ---------- */
+  var report = "";
+  function getJSON(res) { return res.json().catch(function () { return null; }); }
+  function probe(url) {
+    var ctl = new AbortController(), t = setTimeout(function () { ctl.abort(); }, 7000);
+    return fetch(url, { signal: ctl.signal, mode: "cors" }).then(function (r) { clearTimeout(t); return r; })
+      .catch(function (e) { clearTimeout(t); throw (e && e.name === "AbortError") ? new Error("timeout") : e; });
+  }
+  function render(rows) {
+    $("checkList").innerHTML = rows.map(function (r) {
+      return '<div class="chk"><span>' + esc(r.label) + '</span><span class="st-' + r.st + '">' + esc(r.d) + "</span></div>";
+    }).join("");
+  }
+  function runCheck() {
+    var raw = $("siteUrl").value.trim();
+    var msg = $("checkMsg"); msg.textContent = "";
+    var u;
+    try { u = new URL(raw); } catch (e) { msg.textContent = "الرابط غير صالح. استخدم https://example.com"; return; }
+    if (u.protocol !== "https:") { msg.textContent = "يجب استخدام https فقط. افتح عبر https"; return; }
+    var base = u.origin;
+    var rows = [
+      { label: "Manifest", st: "pending", d: "جاري الفحص..." },
+      { label: "Icon 512", st: "pending", d: "جاري الفحص..." },
+      { label: "Service Worker", st: "pending", d: "جاري الفحص..." },
+      { label: "AssetLinks", st: "pending", d: "جاري الفحص..." }
+    ];
+    render(rows); $("btnCheck").disabled = true; msg.textContent = "جاري الفحص...";
+    function fail(i, e, hint) {
+      if (e && e.message === "timeout") rows[i].d = "انتهت المهلة (7ث)", rows[i].st = "bad";
+      else rows[i].d = "تعذر الفحص (CORS) — تحقق يدويًا", rows[i].st = "cors";
+      if (hint) rows[i].d += hint;
+    }
+    probe(base + "/manifest.json").then(function (r) {
+      if (!r.ok) { rows[0] = { label: "Manifest", st: "bad", d: "غير موجود (" + r.status + ")" }; return; }
+      return getJSON(r).then(function (m) {
+        var n = m && m.icons ? m.icons.length : 0;
+        rows[0] = { label: "Manifest", st: "ok", d: "موجود ✓ " + ((m && (m.name || m.short_name)) || "") + " — " + n + " أيقونة" };
+      });
+    }).catch(function (e) { fail(0, e); })
+    .then(function () { return probe(base + "/icons/icon-512x512.png"); }).then(function (r) {
+      if (!r) return;
+      rows[1] = r.ok ? { label: "Icon 512", st: "ok", d: "موجود ✓" } : { label: "Icon 512", st: "bad", d: "غير موجود (" + r.status + ") — تحقق من /icons/" };
+    }, function (e) { fail(1, e); })
+    .then(function () { return probe(base + "/sw.js"); }).then(function (r) {
+      if (!r) return;
+      rows[2] = r.ok ? { label: "Service Worker", st: "ok", d: "موجود ✓" } : { label: "Service Worker", st: "bad", d: "غير موجود (" + r.status + ")" };
+    }, function (e) { fail(2, e); })
+    .then(function () { return probe(base + "/.well-known/assetlinks.json"); }).then(function (r) {
+      if (!r) return;
+      rows[3] = r.ok ? { label: "AssetLinks", st: "ok", d: "موجود ✓" } : { label: "AssetLinks", st: "bad", d: "غير موجود (" + r.status + ") — مطلوب للنشر في المتجر" };
+    }, function (e) { fail(3, e); })
+    .then(function () {
+      render(rows);
+      report = "تقرير فحص " + base + "\n" + rows.map(function (r) { return "- " + r.label + ": " + r.d; }).join("\n");
+      var anyCors = rows.some(function (r) { return r.st === "cors"; });
+      msg.textContent = anyCors ? "بعض الفحوصات محجوبة بـ CORS — افتح الرابط يدويًا أو استخدم DevTools." : "اكتمل الفحص.";
+      $("checkActions").hidden = false; $("btnCheck").disabled = false;
+    });
+  }
+
+  /* ---------- tickets ---------- */
+  function renderTickets() {
+    var all = load(), q = $("tFilter").value.trim().toLowerCase();
+    var list = all.filter(function (t) { return !q || String(t.id).indexOf(q) > -1 || (t.siteUrl || "").toLowerCase().indexOf(q) > -1 || (t.issueType || "").indexOf(q) > -1; });
+    $("tCount").textContent = all.length;
+    $("tList").innerHTML = list.length ? list.map(function (t) {
+      return '<div class="tk"><b>#' + t.id + '</b><span class="pill">' + esc(t.status) + '</span><span class="pill">' + esc(t.packageType) + "</span>" +
+        "<div>" + esc(t.issueType) + "</div><small>" + esc(t.siteUrl || "—") + " • " + esc(t.createdAt) + "</small>" +
+        '<div class="btns"><button class="btn sec" data-a="wa" data-id="' + t.id + '" type="button">واتساب</button>' +
+        '<button class="btn sec" data-a="next" data-id="' + t.id + '" type="button">' + (t.status === "مغلقة" ? "إعادة فتح" : t.status === "مفتوحة" ? "قيد المعالجة" : "إغلاق ✓") + "</button>" +
+        '<button class="btn sec" data-a="del" data-id="' + t.id + '" type="button">حذف</button></div></div>';
+    }).join("") : '<p class="sub">لا توجد تذاكر.</p>';
+  }
+  function waText(t) {
+    return "مرحبا فريق السلطان تك 👋\nتذكرة دعم #" + t.id + "\nالنوع: " + t.issueType + "\nالموقع: " + (t.siteUrl || "—") + "\nالباقة: " + t.packageType + "\n\n" + String(t.desc || "").slice(0, 120);
+  }
+  function waURL(text) { return "https://wa.me/" + WA + "?text=" + encodeURIComponent(text); }
+
+  function submitTicket(e) {
+    e.preventDefault();
+    var msg = $("tMsg"), btn = $("btnSend");
+    var t = {
+      id: Date.now(), name: $("tName").value.trim(), whatsapp: $("tWA").value.replace(/\D/g, ""),
+      packageType: $("tPkg").value, issueType: $("tType").value, siteUrl: $("tUrl").value.trim(),
+      desc: $("tDesc").value.trim(), status: STATUSES[0], createdAt: new Date().toLocaleString("ar")
+    };
+    if (!t.name || t.whatsapp.length < 8 || !t.desc) { msg.textContent = "أكمل الاسم ورقم واتساب (8 أرقام على الأقل) والوصف."; return; }
+    var a = load(); a.unshift(t);
+    if (!save(a)) { msg.textContent = "تعذر الحفظ المحلي (التخزين ممتلئ أو معطّل)."; }
+    renderTickets();
+    var wa = window.open(waURL(waText(t)), "_blank", "noopener");
+    btn.disabled = true;
+    var body = new URLSearchParams({
+      "form-name": "sultan-support", name: t.name, whatsapp: t.whatsapp, packageType: t.packageType,
+      issueType: t.issueType, siteUrl: t.siteUrl, desc: t.desc, ticketId: String(t.id)
+    }).toString();
+    if (location.protocol === "file:") {
+      msg.textContent = "حُفظت التذكرة محليًا. إرسال Netlify غير متاح عبر file:// — افتح الصفحة عبر https."; btn.disabled = false; return;
+    }
+    fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: body })
+      .then(function (r) {
+        if (!r.ok) throw new Error(String(r.status));
+        msg.textContent = "تم إرسال التذكرة #" + t.id + (wa ? "" : " — اسمح بالنوافذ المنبثقة لفتح واتساب.");
+        $("ticketForm").reset();
+      })
+      .catch(function (err) { msg.textContent = "حُفظت التذكرة محليًا لكن فشل الإرسال (" + err.message + "). راسلنا عبر واتساب."; })
+      .then(function () { btn.disabled = false; });
+  }
+
+  function ticketAction(e) {
+    var b = e.target.closest("button[data-a]"); if (!b) return;
+    var id = Number(b.getAttribute("data-id")), a = load(), t = a.filter(function (x) { return x.id === id; })[0];
+    if (!t) return;
+    var act = b.getAttribute("data-a");
+    if (act === "wa") { window.open(waURL(waText(t)), "_blank", "noopener"); return; }
+    if (act === "del") { a = a.filter(function (x) { return x.id !== id; }); }
+    if (act === "next") { t.status = STATUSES[(STATUSES.indexOf(t.status) + 1) % 3]; }
+    save(a); renderTickets();
+  }
+
+  /* ---------- faq ---------- */
+  function renderFaq() {
+    var q = $("faqQ").value.trim().toLowerCase();
+    var items = FAQ.filter(function (f) { return !q || f[0].toLowerCase().indexOf(q) > -1 || f[1].toLowerCase().indexOf(q) > -1; });
+    $("faqList").innerHTML = items.length ? items.map(function (f) {
+      return "<details><summary>" + esc(f[0]) + "</summary><p>" + esc(f[1]) + "</p></details>";
+    }).join("") : '<p class="sub">لا نتائج.</p>';
+  }
+
+  /* ---------- init ---------- */
+  $("waLink").href = waURL("مرحبا فريق السلطان تك 👋 أحتاج مساعدة");
+  $("mailLink").href = "mailto:" + MAIL;
+  $("btnCheck").addEventListener("click", runCheck);
+  $("btnCopy").addEventListener("click", function () {
+    if (navigator.clipboard) navigator.clipboard.writeText(report).then(function () { $("checkMsg").textContent = "تم نسخ التقرير."; });
+  });
+  $("btnShareReport").addEventListener("click", function () { window.open(waURL(report), "_blank", "noopener"); });
+  $("ticketForm").addEventListener("submit", submitTicket);
+  $("tList").addEventListener("click", ticketAction);
+  $("tFilter").addEventListener("input", renderTickets);
+  $("faqQ").addEventListener("input", renderFaq);
+  $("btnClear").addEventListener("click", function () {
+    if (confirm("حذف كل التذاكر المحفوظة محليًا؟")) { try { localStorage.removeItem(KEY); } catch (e) {} renderTickets(); }
+  });
+  renderTickets(); renderFaq();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1927 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#050A1A">
+<meta name="robots" content="noindex, nofollow">
+<title>مولّد حزم السلطان تك — Enhanced Pro</title>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:#050A1A;color:#fff;min-height:100vh;padding:22px 18px 40px;
+    font-family:'Tajawal',system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:500px;margin:0 auto}
+  h1{font-size:26px;font-weight:900;text-align:center;margin:26px 0 6px;line-height:1.25;
+    background:linear-gradient(135deg,#FFC53D,#FF8C00);-webkit-background-clip:text;background-clip:text;
+    -webkit-text-fill-color:transparent;color:transparent}
+  .sub{text-align:center;color:rgba(255,255,255,.5);font-size:13px;font-weight:700;margin:0 0 22px}
+  .card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
+    border-radius:24px;padding:18px;margin-bottom:16px}
+  .card-head{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .badge{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+    font-weight:900;font-size:13px;color:#000;flex:0 0 auto}
+  .badge.gold{background:linear-gradient(135deg,#FFC53D,#FF8C00)}
+  .badge.blue{background:linear-gradient(135deg,#60A5FA,#22D3EE)}
+  .badge.purple{background:linear-gradient(135deg,#A855F7,#EC4899)}
+  .card-title{font-weight:900;font-size:15px;line-height:1.3}
+  .card-desc{font-size:12px;color:rgba(255,255,255,.5);font-weight:700;margin-top:2px}
+  .field-group{margin-bottom:12px}
+  .field-group label{display:block;font-size:12px;font-weight:700;margin-bottom:6px;color:rgba(255,255,255,.8)}
+  .field-group input[type="text"],.field-group input[type="file"]{
+    width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
+    border-radius:12px;padding:12px;font-size:13px;color:#fff;outline:none;font-family:inherit}
+  .field-group input[type="password"]{width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
+    border-radius:12px;padding:12px;font-size:13px;color:#fff;outline:none;font-family:inherit}
+  .field-group input[type="password"]:focus{border-color:#4ADE80}
+  #btnDeploy{background:linear-gradient(90deg,#4ADE80,#22D3EE)}
+  .deploy-link{display:none;margin-top:12px;padding:12px;border-radius:12px;text-align:center;direction:ltr;word-break:break-all;
+    background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.35);color:#4ADE80;font-weight:900;font-size:13px;text-decoration:none}
+  .deploy-link.on{display:block}
+  .field-group input[type="text"]:focus,.field-group textarea:focus{border-color:#FFC53D}
+  .field-group textarea{width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
+    border-radius:12px;padding:12px;font-size:13px;color:#fff;outline:none;font-family:inherit;resize:vertical;line-height:1.7}
+  .color-row label{display:block;font-size:12px;font-weight:700;margin-bottom:6px;color:rgba(255,255,255,.8)}
+  .logo-prev{display:block;width:56px;height:56px;object-fit:contain;margin-top:8px;border-radius:12px;
+    border:1px solid rgba(255,255,255,.15);background:#0A1931}
+  .logo-prev[hidden]{display:none}
+  .field-group select{width:100%;background:#0F1A33;border:1px solid rgba(255,255,255,.12);border-radius:12px;
+    padding:12px;font-size:13px;color:#fff;outline:none;font-family:inherit}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .btn-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+  .btn.sec{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.15)}
+  .token-row{display:flex;gap:8px;align-items:stretch}
+  .token-row input[type="password"]{width:auto;flex:1 1 auto;min-width:0}
+  #btnCheckToken{width:auto;flex:0 0 auto;padding:12px 16px;font-size:13px}
+  .modal{position:fixed;inset:0;background:rgba(0,0,0,.78);display:none;align-items:center;justify-content:center;z-index:100;padding:14px}
+  .modal.on{display:flex}
+  .modal-box{width:100%;max-width:420px;display:flex;flex-direction:column;gap:10px}
+  .modal-box iframe{width:100%;height:min(78vh,760px);border:1px solid rgba(255,255,255,.15);border-radius:22px;background:#050A1A}
+  .modal-box .btn{padding:12px}
+  .modal-bar{display:flex;align-items:center;justify-content:space-between;gap:8px}
+  .live-pill{font-size:11px;font-weight:900;color:#1a1000;background:linear-gradient(135deg,#4ADE80,#22D3EE);
+    border-radius:999px;padding:3px 10px;display:none}
+  .live-pill.on{display:inline-block}
+  .live-card{display:none;margin-bottom:16px}
+  .live-card.on{display:block}
+  .phone-frame{margin:0 auto;max-width:320px;background:#0a0f1c;border:2px solid rgba(255,255,255,.15);
+    border-radius:28px;padding:10px 8px 14px;box-shadow:0 20px 50px rgba(0,0,0,.45)}
+  .phone-notch{width:96px;height:8px;border-radius:999px;background:rgba(255,255,255,.12);margin:0 auto 8px}
+  .phone-frame iframe{width:100%;height:520px;border:0;border-radius:18px;background:#050A1A;display:block}
+  .live-status{text-align:center;font-size:11px;font-weight:700;color:rgba(255,255,255,.4);margin-top:10px;min-height:16px}
+  .live-status.ok{color:#4ADE80}.live-status.err{color:#F87171}
+  .btn-row{display:flex;gap:8px}
+  .btn-row .btn{flex:1}
+  .field-group input[type="file"]{padding:10px;font-size:12px}
+  .field-group input[type="file"]::file-selector-button{
+    background:rgba(255,197,61,.15);color:#FFC53D;border:1px solid rgba(255,197,61,.3);
+    border-radius:8px;padding:6px 12px;font-weight:900;font-family:inherit;cursor:pointer;margin-inline-end:8px}
+  .color-row label{display:block;font-size:12px;font-weight:700;margin-bottom:6px;color:rgba(255,255,255,.8)}
+  .color-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .color-picker-wrap{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:8px 12px}
+  .color-picker-wrap input[type="color"]{border:0;background:none;width:32px;height:32px;cursor:pointer;padding:0;border-radius:8px}
+  .color-picker-wrap span{font-size:11px;color:rgba(255,255,255,.55);font-weight:700}
+  .btn{width:100%;border:0;border-radius:12px;padding:15px;font-weight:900;font-size:14px;
+    color:#000;cursor:pointer;font-family:inherit;transition:transform .12s ease,opacity .12s ease}
+  .btn:not(:disabled):active{transform:scale(.98)}
+  .btn:disabled{opacity:.55;cursor:default}
+  #btnPWA{background:linear-gradient(90deg,#FFC53D,#FF8C00)}
+  #btnStore{background:linear-gradient(90deg,#60A5FA,#22D3EE)}
+  .progress{height:3px;background:rgba(255,255,255,.08);border-radius:99px;overflow:hidden;margin-top:10px;display:none}
+  .progress.on{display:block}
+  .progress > i{display:block;height:100%;width:0;background:linear-gradient(90deg,#FFC53D,#FF8C00);transition:width .18s ease}
+  .status{font-size:12px;text-align:center;margin-top:10px;color:rgba(255,255,255,.45);font-weight:700;min-height:17px}
+  .status.ok{color:#4ADE80}.status.err{color:#F87171}
+  .diag{margin-top:18px;font-size:11px;color:rgba(255,255,255,.35);text-align:center;font-weight:700;line-height:1.8}
+  .diag .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#4ADE80;margin-inline-end:5px;vertical-align:middle}
+  .diag .dot.bad{background:#F87171}
+
+  body.locked .wrap{display:none!important}
+  body.locked{padding:0}
+  #accessGate{min-height:100vh;display:none;align-items:center;justify-content:center;padding:24px 16px}
+  body.locked #accessGate{display:flex}
+  .gate-box{width:100%;max-width:380px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
+    border-radius:22px;padding:28px 22px;text-align:center}
+  .gate-box h2{margin:0 0 8px;font-size:20px;font-weight:900;
+    background:linear-gradient(135deg,#FFC53D,#FF8C00);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .gate-box p{margin:0 0 18px;color:rgba(255,255,255,.5);font-size:13px;font-weight:700;line-height:1.6}
+  .gate-box input{width:100%;padding:14px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.15);
+    background:rgba(0,0,0,.35);color:#fff;font:inherit;font-weight:700;text-align:center;margin-bottom:12px;outline:none}
+  .gate-box input:focus{border-color:rgba(255,197,61,.55)}
+  .gate-box .btn{width:100%;border:0;border-radius:12px;padding:14px;font-weight:900;font-size:14px;
+    color:#000;cursor:pointer;font-family:inherit;background:linear-gradient(90deg,#FFC53D,#FF8C00)}
+  .gate-box .btn:disabled{opacity:.55;cursor:default}
+  .gate-err{min-height:18px;font-size:12px;font-weight:700;color:#F87171;margin:8px 0 0}
+  .gate-hint{margin-top:14px;font-size:11px;color:rgba(255,255,255,.35);font-weight:700}
+  .gate-hint a{color:#FFC53D;text-decoration:none}
+  .topnav{display:flex;justify-content:center;gap:8px;margin:0 0 18px;flex-wrap:wrap}
+  .topnav a{color:rgba(255,255,255,.55);text-decoration:none;font-size:13px;font-weight:700;
+    padding:6px 14px;border:1px solid rgba(255,255,255,.12);border-radius:999px}
+  .topnav a:hover{color:#FFC53D;border-color:rgba(255,197,61,.4)}
+  .topnav a.on{color:#1a1000;background:linear-gradient(135deg,#FFC53D,#FF8C00);border-color:transparent}
+
+</style>
+</head>
+<body class="locked">
+<div id="accessGate" aria-live="polite">
+  <div class="gate-box">
+    <h2>🔒 منطقة محمية</h2>
+    <p>المولّد مخصّص للعملاء بعد الشراء.<br>أدخل رمز الوصول للمتابعة.</p>
+    <form id="gateForm" autocomplete="off">
+      <input type="password" id="gateCode" name="code" placeholder="رمز الوصول" maxlength="64" required autofocus dir="ltr">
+      <button type="submit" class="btn" id="gateBtn">دخول</button>
+      <div class="gate-err" id="gateErr"></div>
+    </form>
+    <div class="gate-hint">للطلب: <a href="../">الصفحة الرئيسية</a> · <a href="../support/">الدعم</a></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <h1>مولّد حزم السلطان تك <small id="verBadge" style="font-size:11px;font-weight:700;color:#FFC53D;border:1px solid rgba(255,197,61,.4);border-radius:999px;padding:2px 8px;vertical-align:middle;margin-inline-start:6px" dir="ltr">v2.1.0</small></h1>
+  <p class="sub">Enhanced Pro — تخصيص كامل + حزم جاهزة للنشر</p>
+  <nav class="topnav" aria-label="التنقل الرئيسي">
+    <a href="../">الرئيسية</a>
+    <a href="./" class="on">المولّد</a>
+    <a href="../guide/">الدليل</a>
+    <a href="../support/">الدعم</a>
+  </nav>
+
+
+  <section class="card">
+    <div class="card-head">
+      <div class="badge purple">⚙️</div>
+      <div>
+        <div class="card-title">تخصيص البيانات والهوية</div>
+        <div class="card-desc">تُطبَّق فورًا على كل الملفات المولَّدة</div>
+      </div>
+    </div>
+    <div class="two">
+      <div class="field-group">
+        <label>القالب الجاهز</label>
+        <select id="cfgTemplate">
+          <option value="tech">💼 شركة تقنية</option>
+          <option value="restaurant">🍽️ مطعم</option>
+          <option value="clinic">🩺 عيادة</option>
+          <option value="store">🛍️ متجر</option>
+        </select>
+      </div>
+      <div class="field-group">
+        <label>لغة التطبيق</label>
+        <select id="cfgLang">
+          <option value="ar">العربية (RTL)</option>
+          <option value="en">English (LTR)</option>
+        </select>
+      </div>
+    </div>
+    <div class="field-group">
+      <label>اسم التطبيق / الشركة</label>
+      <input type="text" id="cfgName" value="شركة السلطان للتكنولوجيا" maxlength="60">
+    </div>
+    <div class="field-group">
+      <label>رقم الواتساب (بالمفتاح الدولي بدون +)</label>
+      <input type="text" id="cfgWA" value="213775519021" maxlength="30" dir="ltr" inputmode="tel">
+    </div>
+    <div class="field-group">
+      <label>شعار التطبيق (اختياري — PNG/JPG)</label>
+      <input type="file" id="cfgLogo" accept="image/png,image/jpeg">
+      <img id="logoPrev" class="logo-prev" alt="" hidden>
+    </div>
+    <div class="color-row">
+      <div>
+        <label>اللون الرئيسي</label>
+        <div class="color-picker-wrap">
+          <input type="color" id="cfgColor1" value="#FFC53D">
+          <span id="c1val">#FFC53D</span>
+        </div>
+      </div>
+      <div>
+        <label>اللون الثانوي</label>
+        <div class="color-picker-wrap">
+          <input type="color" id="cfgColor2" value="#FF8C00">
+          <span id="c2val">#FF8C00</span>
+        </div>
+      </div>
+    </div>
+    <div class="field-group" style="margin-top:12px">
+      <label>الشعار الفرعي (سطر تحت العنوان)</label>
+      <input type="text" id="cfgTagline" maxlength="200" value="حلول رقمية متقدمة — برمجة، ذكاء اصطناعي، أنظمة سحابية وأمن سيبراني.">
+    </div>
+    <div class="field-group">
+      <label>نبذة «من نحن»</label>
+      <textarea id="cfgAbout" rows="3" maxlength="500">شركة تقنية تقدم حلولًا رقمية متكاملة بمعايير عالمية: من الفكرة إلى الإطلاق والدعم المستمر.</textarea>
+    </div>
+    <div class="field-group">
+      <label>الخدمات — سطر لكل خدمة: أيقونة | العنوان | الوصف | ميزة1، ميزة2</label>
+      <textarea id="cfgServices" rows="7">💻 | تطوير البرمجيات | تطبيقات ويب وموبايل | React / Next.js, Android & iOS, لوحات تحكم
+🤖 | الذكاء الاصطناعي | حلول AI مخصصة | Chatbots, تحليل بيانات, توصيات
+☁️ | الأنظمة السحابية | بنية سحابية مرنة | AWS / Azure, نسخ احتياطي, أداء عالٍ
+🛡️ | الأمن السيبراني | حماية متكاملة | فحص الثغرات, تشفير, مراقبة 24/7</textarea>
+    </div>
+    <div class="field-group">
+      <label>الإحصائيات (حتى 3) — سطر لكل رقم: القيمة | الوصف — اتركه فارغًا للإخفاء</label>
+      <textarea id="cfgStats" rows="3">+500 | مشروع
+10 سنوات | خبرة
+98% | رضا</textarea>
+    </div>
+    <div class="btn-row">
+      <button type="button" id="btnLive" class="btn sec">🔴 معاينة مباشرة</button>
+      <button type="button" id="btnPreview" class="btn sec">⛶ ملء الشاشة</button>
+    </div>
+    <div class="btn-row" style="margin-top:8px">
+      <button type="button" id="btnReset" class="btn sec">↺ إعادة الضبط</button>
+    </div>
+  </section>
+
+  <section class="card live-card" id="liveCard">
+    <div class="card-head">
+      <div class="badge gold">LIVE</div>
+      <div>
+        <div class="card-title">معاينة مباشرة <span class="live-pill on" id="livePill">مباشر</span></div>
+        <div class="card-desc">تتحدّث تلقائيًا عند تعديل الحقول</div>
+      </div>
+    </div>
+    <div class="phone-frame">
+      <div class="phone-notch"></div>
+      <iframe id="liveFrame" title="معاينة مباشرة" sandbox="allow-scripts allow-popups"></iframe>
+    </div>
+    <div class="live-status" id="liveStatus">جاهز — عدّل أي حقل للتحديث</div>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <div class="badge gold">PWA</div>
+      <div>
+        <div class="card-title">التطبيق الخفيف PWA</div>
+        <div class="card-desc">index + manifest + sw + icons + README</div>
+      </div>
+    </div>
+    <button id="btnPWA" class="btn" disabled>⬇️ حمّل PWA المخصص</button>
+    <div class="progress" id="progPWA"><i></i></div>
+    <div id="statusPWA" class="status">جاري الفحص…</div>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <div class="badge blue">STORE</div>
+      <div>
+        <div class="card-title">حزمة الرفع للـ Store</div>
+        <div class="card-desc">Capacitor + TWA + AssetLinks + README</div>
+      </div>
+    </div>
+    <div class="field-group">
+      <label>معرّف حزمة Android (Package ID)</label>
+      <input type="text" id="cfgPkg" value="com.alsultan.app" dir="ltr" maxlength="80" autocapitalize="off" spellcheck="false">
+    </div>
+    <div class="field-group">
+      <label>نطاق الموقع المنشور (Host)</label>
+      <input type="text" id="cfgHost" value="alsultan-tech.netlify.app" dir="ltr" maxlength="100" autocapitalize="off" spellcheck="false">
+    </div>
+    <div class="field-group">
+      <label>بصمة SHA256 للتوقيع (اختياري)</label>
+      <input type="text" id="cfgSha" value="" dir="ltr" maxlength="120" placeholder="AA:BB:CC:…" spellcheck="false">
+    </div>
+    <button id="btnStore" class="btn" disabled>⬇️ حمّل حزمة Store المخصصة</button>
+    <div class="progress" id="progStore"><i></i></div>
+    <div id="statusStore" class="status">جاري الفحص…</div>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <div class="badge" style="background:linear-gradient(135deg,#4ADE80,#22D3EE)">🚀</div>
+      <div>
+        <div class="card-title">نشر مباشر على Netlify</div>
+        <div class="card-desc">يرفع الـ PWA وينشئ الرابط بضغطة واحدة</div>
+      </div>
+    </div>
+    <div class="field-group">
+      <label>Netlify Personal Access Token</label>
+      <div class="token-row">
+        <input type="password" id="nlToken" autocomplete="off" dir="ltr" placeholder="nfp_…" spellcheck="false">
+        <button type="button" id="btnCheckToken" class="btn sec">فحص</button>
+      </div>
+      <div id="tokenStatus" class="status" style="margin-top:8px;text-align:right;min-height:0"></div>
+    </div>
+    <div class="field-group">
+      <label>اسم الموقع (اختياري) → name.netlify.app</label>
+      <input type="text" id="cfgSiteName" dir="ltr" maxlength="40" autocapitalize="off" spellcheck="false" placeholder="my-app">
+    </div>
+    <div class="field-group">
+      <label>Site ID — يُملأ تلقائيًا بعد أول نشر (يُحدّث نفس الموقع)</label>
+      <input type="text" id="cfgSiteId" dir="ltr" maxlength="60" autocapitalize="off" spellcheck="false">
+    </div>
+    <button id="btnDeploy" class="btn" disabled>🚀 انشر الآن</button>
+    <div class="progress" id="progDeploy"><i></i></div>
+    <div id="statusDeploy" class="status">أنشئ توكن من Netlify ← User settings ← Applications</div>
+    <a id="deployLink" class="deploy-link" target="_blank" rel="noopener"></a>
+    <div class="card-desc" style="margin-top:10px;text-align:center">التوكن لا يُحفظ ولا يُرسل إلا إلى api.netlify.com</div>
+  </section>
+
+  <div class="diag" id="diag"></div>
+</div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <div class="modal-bar">
+      <span class="live-pill on" id="modalLivePill">مباشر · يتحدّث مع التعديلات</span>
+      <button type="button" id="btnClosePv" class="btn sec" style="width:auto;padding:8px 14px">✕ إغلاق</button>
+    </div>
+    <iframe id="pvFrame" title="معاينة" sandbox="allow-scripts allow-popups"></iframe>
+  </div>
+</div>
+
+
+<script>
+(function () {
+  'use strict';
+  var ACCESS_CODE = "SultanPro2026";
+  var STORE_KEY = "sultan-gen-unlock-v1";
+  var MAX_TRIES = 8;
+  var tries = 0;
+  function unlocked() {
+    try { return sessionStorage.getItem(STORE_KEY) === "1"; } catch (e) { return false; }
+  }
+  function setUnlocked() {
+    try { sessionStorage.setItem(STORE_KEY, "1"); } catch (e) {}
+  }
+  function openApp() { document.body.classList.remove("locked"); }
+  function checkCode(raw) { return String(raw || "").trim() === ACCESS_CODE; }
+  try {
+    var params = new URLSearchParams(location.search);
+    var q = params.get("key") || params.get("access") || "";
+    if (q && checkCode(q)) {
+      setUnlocked();
+      try {
+        params.delete("key"); params.delete("access");
+        var clean = location.pathname + (params.toString() ? "?" + params.toString() : "");
+        history.replaceState(null, "", clean || location.pathname);
+      } catch (e) {}
+    }
+  } catch (e) {}
+  if (unlocked()) { openApp(); return; }
+  var form = document.getElementById("gateForm");
+  var input = document.getElementById("gateCode");
+  var err = document.getElementById("gateErr");
+  var btn = document.getElementById("gateBtn");
+  if (!form || !input) return;
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (tries >= MAX_TRIES) {
+      err.textContent = "محاولات كثيرة — أعد تحميل الصفحة لاحقًا";
+      btn.disabled = true;
+      return;
+    }
+    if (checkCode(input.value)) {
+      setUnlocked(); openApp(); err.textContent = "";
+    } else {
+      tries++;
+      err.textContent = "رمز غير صحيح (" + tries + "/" + MAX_TRIES + ")";
+      input.value = ""; input.focus();
+    }
+  });
+})();
+</script>
+
+<script>
+(function () {
+  'use strict';
+
+  var ICON_SIZES = [72, 96, 128, 144, 152, 192, 384, 512];
+
+  var I18N = {
+    ar: { home:"الرئيسية", services:"خدمات", about:"من نحن", contact:"تواصل",
+          servicesTitle:"خدماتنا", aboutTitle:"من نحن", contactTitle:"تواصل معنا",
+          waDirect:"واتساب مباشر", call:"📞 اتصال", waLabel:"واتساب", callDirect:"اتصال مباشر", waInfo:"📞 واتساب: ",
+          phName:"اسمك", phPhone:"رقم هاتفك", phMsg:"تفاصيل مشروعك...", submit:"إرسال عبر واتساب 🚀",
+          alertMsg:"الرجاء إدخال الاسم ورقم الهاتف", hello:"السلام عليكم 👋", fName:"الاسم: ", fPhone:"الهاتف: ",
+          fService:"الخدمة: ", fDetails:"التفاصيل: ", install:"⬇️ تثبيت", mDesc:" — تطبيق رسمي", mWa:"واتساب", mSv:"الخدمات" },
+    en: { home:"Home", services:"Services", about:"About", contact:"Contact",
+          servicesTitle:"Our Services", aboutTitle:"About Us", contactTitle:"Contact Us",
+          waDirect:"WhatsApp", call:"📞 Call", waLabel:"WhatsApp", callDirect:"Direct call", waInfo:"📞 WhatsApp: ",
+          phName:"Your name", phPhone:"Your phone", phMsg:"Tell us about your project...", submit:"Send via WhatsApp 🚀",
+          alertMsg:"Please enter your name and phone", hello:"Hello 👋", fName:"Name: ", fPhone:"Phone: ",
+          fService:"Service: ", fDetails:"Details: ", install:"⬇️ Install", mDesc:" — Official app", mWa:"WhatsApp", mSv:"Services" }
+  };
+
+  var TEMPLATES = {
+    tech: { c1:"#FFC53D", c2:"#FF8C00", ar:null,
+      en:{ tagline:"Advanced digital solutions — software, AI, cloud systems and cybersecurity.",
+           about:"A technology company delivering end-to-end digital solutions to global standards, from idea to launch and ongoing support.",
+           services:"💻 | Software Development | Web & mobile apps | React / Next.js, Android & iOS, Dashboards\n🤖 | Artificial Intelligence | Custom AI solutions | Chatbots, Data analysis, Recommendations\n☁️ | Cloud Systems | Flexible cloud infrastructure | AWS / Azure, Backups, High performance\n🛡️ | Cybersecurity | Complete protection | Vulnerability scans, Encryption, 24/7 monitoring",
+           stats:"+500 | Projects\n10 years | Experience\n98% | Satisfaction" } },
+    restaurant: { c1:"#F97316", c2:"#EF4444",
+      ar:{ tagline:"أشهى الأطباق بنكهة أصيلة — اطلب الآن عبر واتساب",
+           about:"مطعم يقدّم أطباقًا طازجة تُحضَّر يوميًا بأجود المكونات، مع خدمة توصيل سريعة وحجز للطاولات والمناسبات.",
+           services:"🍽️ | قائمة الطعام | أطباق رئيسية ومقبلات | مشويات, معجنات, سلطات\n🛵 | التوصيل | إلى باب بيتك | توصيل سريع, دفع عند الاستلام, تتبّع الطلب\n🎉 | الحجز والمناسبات | طاولات وحفلات | حجز طاولة, حفلات خاصة, بوفيه مفتوح",
+           stats:"4.8★ | تقييم الزبائن\n30 د | متوسط التوصيل\n+100 | طبق" },
+      en:{ tagline:"Authentic flavors, freshly made — order now on WhatsApp",
+           about:"A restaurant serving fresh dishes made daily with quality ingredients, with fast delivery plus table and event bookings.",
+           services:"🍽️ | Our Menu | Mains and starters | Grills, Pastries, Salads\n🛵 | Delivery | Right to your door | Fast delivery, Cash on delivery, Order tracking\n🎉 | Bookings & Events | Tables and parties | Table booking, Private parties, Buffet",
+           stats:"4.8★ | Customer rating\n30 min | Avg. delivery\n100+ | Dishes" } },
+    clinic: { c1:"#22D3EE", c2:"#3B82F6",
+      ar:{ tagline:"رعاية صحية موثوقة — احجز موعدك بسهولة",
+           about:"عيادة تقدم خدمات طبية متكاملة بفريق متخصص ومواعيد مرنة، مع متابعة مستمرة لكل مراجع.",
+           services:"🩺 | الكشف والاستشارة | فحص واستشارة طبية | استشارة أولية, تقارير, متابعة\n🦷 | طب الأسنان | عناية بالأسنان | تنظيف, تقويم, تجميل\n🧪 | التحاليل | نتائج بدقة | مخبر معتمد, نتائج سريعة, سحب منزلي\n📅 | حجز المواعيد | سهل وسريع | عبر واتساب, تذكير بالموعد, إلغاء مرن",
+           stats:"+10 | سنوات خبرة\n+5000 | مراجع\n7/7 | أيام العمل" },
+      en:{ tagline:"Trusted healthcare — book your appointment easily",
+           about:"A clinic offering complete medical services with a specialized team and flexible hours, with continuous follow-up for every patient.",
+           services:"🩺 | Checkups & Consultations | Examinations and advice | First consultation, Reports, Follow-up\n🦷 | Dental Care | Teeth care | Cleaning, Braces, Cosmetic\n🧪 | Lab Tests | Accurate results | Certified lab, Fast results, Home sampling\n📅 | Appointments | Quick and easy | Via WhatsApp, Reminders, Flexible cancellation",
+           stats:"10+ | Years experience\n5000+ | Patients\n7/7 | Days open" } },
+    store: { c1:"#A855F7", c2:"#EC4899",
+      ar:{ tagline:"تسوّق أحدث المنتجات بأفضل الأسعار — اطلب عبر واتساب",
+           about:"متجر يوفّر تشكيلة واسعة من المنتجات الأصلية بأسعار منافسة، مع شحن لجميع المدن ودعم سريع قبل الشراء وبعده.",
+           services:"🛍️ | المنتجات | تشكيلة واسعة | جديد, الأكثر مبيعًا, عروض\n🚚 | الشحن | توصيل لجميع المدن | شحن سريع, تتبّع الشحنة, دفع عند الاستلام\n🔁 | الاستبدال والإرجاع | سياسة مرنة | استبدال, ضمان, دعم سريع\n💬 | الطلب عبر واتساب | بدون تسجيل | رد فوري, تفاصيل المنتج, تأكيد الطلب",
+           stats:"+1000 | منتج\n24h | شحن سريع\n4.9★ | تقييم" },
+      en:{ tagline:"Shop the latest products at the best prices — order on WhatsApp",
+           about:"A store offering a wide range of authentic products at competitive prices, shipping to all cities with fast support before and after purchase.",
+           services:"🛍️ | Products | Wide selection | New arrivals, Best sellers, Deals\n🚚 | Shipping | Delivery to all cities | Fast shipping, Tracking, Cash on delivery\n🔁 | Exchange & Returns | Flexible policy | Exchanges, Warranty, Fast support\n💬 | Order on WhatsApp | No sign-up | Instant reply, Product details, Order confirmation",
+           stats:"1000+ | Products\n24h | Fast shipping\n4.9★ | Rating" } }
+  };
+  var MASKABLE_SIZES = [192, 512];
+
+  function escapeHTML(s) {
+    return String(s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  }
+  function sanitizeWA(s) {
+    return String(s).replace(/[^0-9]/g, "").slice(0, 15);
+  }
+
+  function jsonForScript(o) {
+    return JSON.stringify(o).replace(/</g, "\\u003c").replace(/\u2028/g, "\\u2028").replace(/\u2029/g, "\\u2029");
+  }
+  function clip(x, n) { x = String(x).trim(); return x.length > n ? x.substring(0, n) : x; }
+
+  function parseServices(text) {
+    var out = [];
+    String(text).split(/\r?\n/).forEach(function (line) {
+      line = line.trim();
+      if (!line || out.length >= 12) return;
+      var p = line.split("|").map(function (x) { return x.trim(); });
+      var sv;
+      if (p.length >= 4) sv = { icon: p[0], title: p[1], desc: p[2], features: p.slice(3).join("|") };
+      else if (p.length === 3) sv = { icon: p[0], title: p[1], desc: p[2], features: "" };
+      else if (p.length === 2) sv = { icon: p[0], title: p[1], desc: "", features: "" };
+      else sv = { icon: "✨", title: p[0], desc: "", features: "" };
+      if (!sv.title) return;
+      out.push({
+        icon: clip(sv.icon || "✨", 4),
+        title: clip(sv.title, 60),
+        desc: clip(sv.desc, 120),
+        features: sv.features.split(/[,،]/).map(function (f) { return clip(f, 40); }).filter(Boolean).slice(0, 6)
+      });
+    });
+    return out;
+  }
+
+  function parseStats(text) {
+    var out = [];
+    String(text).split(/\r?\n/).forEach(function (line) {
+      line = line.trim();
+      if (!line || out.length >= 3) return;
+      var p = line.split("|").map(function (x) { return x.trim(); });
+      if (!p[0]) return;
+      out.push({ value: clip(p[0], 12), label: clip(p[1] || "", 24) });
+    });
+    return out;
+  }
+
+  function normalizeSha(x) {
+    var h = String(x).replace(/[^0-9a-fA-F]/g, "").toUpperCase();
+    if (h.length !== 64) return null;
+    return h.match(/.{2}/g).join(":");
+  }
+
+  function readConfig(strictStore) {
+    var val = function (id) { return document.getElementById(id).value; };
+    var hex = /^#[0-9a-fA-F]{6}$/;
+    var name = clip(val("cfgName"), 60) || "تطبيق السلطان";
+    var wa = sanitizeWA(val("cfgWA")) || "213775519021";
+    if (wa.length < 8) throw new Error("رقم الواتساب قصير جدًا (8 أرقام على الأقل)");
+    var c1 = hex.test(val("cfgColor1")) ? val("cfgColor1") : "#FFC53D";
+    var c2 = hex.test(val("cfgColor2")) ? val("cfgColor2") : "#FF8C00";
+    var tagline = clip(val("cfgTagline"), 200) || "حلول رقمية متقدمة";
+    var about = clip(val("cfgAbout"), 500) || (name + " — شركة تقنية");
+    var lang = val("cfgLang") === "en" ? "en" : "ar";
+    var stats = parseStats(val("cfgStats"));
+    var services = parseServices(val("cfgServices"));
+    if (!services.length) throw new Error("أضف خدمة واحدة على الأقل");
+
+    var pkg = val("cfgPkg").trim().toLowerCase() || "com.alsultan.app";
+    var host = val("cfgHost").trim().toLowerCase().replace(/^[a-z]+:\/\//, "").replace(/[\/?#].*$/, "") || "alsultan-tech.netlify.app";
+    var shaRaw = val("cfgSha").trim();
+    var sha = shaRaw ? normalizeSha(shaRaw) : "";
+    if (strictStore) {
+      if (!/^[a-z][a-z0-9_]*(\.[a-z][a-z0-9_]*)+$/.test(pkg)) throw new Error("معرّف الحزمة غير صالح (مثال: com.mycompany.app)");
+      if (!/^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+$/.test(host)) throw new Error("النطاق غير صالح (مثال: myapp.netlify.app)");
+      if (shaRaw && !sha) throw new Error("بصمة SHA256 غير صالحة (يجب 64 خانة سداسية)");
+    }
+    return { name: name, wa: wa, c1: c1, c2: c2, tagline: tagline, about: about,
+             services: services, stats: stats, lang: lang, pkg: pkg, host: host, sha: sha || "" };
+  }
+
+  function syncColorLabels() {
+    document.getElementById("c1val").textContent = document.getElementById("cfgColor1").value;
+    document.getElementById("c2val").textContent = document.getElementById("cfgColor2").value;
+  }
+  document.getElementById("cfgColor1").addEventListener("input", syncColorLabels);
+  document.getElementById("cfgColor2").addEventListener("input", syncColorLabels);
+
+  var PERSIST = ["cfgTemplate","cfgLang","cfgName","cfgWA","cfgColor1","cfgColor2","cfgTagline","cfgAbout","cfgServices","cfgStats","cfgPkg","cfgHost","cfgSha","cfgSiteName","cfgSiteId"];
+  var STORE_KEY = "sultan-gen-v2";
+  function saveSettings() {
+    try {
+      var o = {};
+      PERSIST.forEach(function (id) { o[id] = document.getElementById(id).value; });
+      localStorage.setItem(STORE_KEY, JSON.stringify(o));
+    } catch (e) {}
+  }
+  function loadSettings() {
+    try {
+      var o = JSON.parse(localStorage.getItem(STORE_KEY) || "null");
+      if (!o) return;
+      PERSIST.forEach(function (id) { if (typeof o[id] === "string") document.getElementById(id).value = o[id]; });
+    } catch (e) {}
+    syncColorLabels();
+  }
+  TEMPLATES.tech.ar = {
+    tagline: document.getElementById("cfgTagline").defaultValue,
+    about: document.getElementById("cfgAbout").defaultValue,
+    services: document.getElementById("cfgServices").defaultValue,
+    stats: document.getElementById("cfgStats").defaultValue
+  };
+  function setVal(id, v) { document.getElementById(id).value = v; }
+  function applyTemplate(key, lang, withColors) {
+    var t = TEMPLATES[key], d = t && t[lang];
+    if (!d) return;
+    setVal("cfgTagline", d.tagline); setVal("cfgAbout", d.about);
+    setVal("cfgServices", d.services); setVal("cfgStats", d.stats);
+    if (withColors) { setVal("cfgColor1", t.c1); setVal("cfgColor2", t.c2); }
+    syncColorLabels(); saveSettings();
+  }
+  function isPristine(key, lang) {
+    var d = TEMPLATES[key] && TEMPLATES[key][lang];
+    if (!d) return false;
+    var same = function (id, v) { return document.getElementById(id).value.trim() === String(v).trim(); };
+    return same("cfgTagline", d.tagline) && same("cfgAbout", d.about) && same("cfgServices", d.services) && same("cfgStats", d.stats);
+  }
+  var lastLang = "ar";
+  var lastTemplate = "tech";
+  document.getElementById("cfgTemplate").addEventListener("change", function () {
+    var key = this.value, lang = document.getElementById("cfgLang").value;
+    var pristine = ["tech","restaurant","clinic","store"].some(function (k) { return isPristine(k, lang); });
+    if (!pristine && !confirm("سيتم استبدال النصوص التي عدّلتها ببيانات القالب الجديد.\n\nمتابعة؟")) {
+      this.value = lastTemplate;
+      return;
+    }
+    applyTemplate(key, lang, true);
+    lastTemplate = key;
+  });
+  document.getElementById("cfgLang").addEventListener("change", function () {
+    var key = document.getElementById("cfgTemplate").value, nl = this.value;
+    if (isPristine(key, lastLang)) applyTemplate(key, nl, false);
+    lastLang = nl; saveSettings();
+  });
+  PERSIST.forEach(function (id) {
+    var el = document.getElementById(id);
+    el.addEventListener("input", saveSettings);
+    el.addEventListener("change", saveSettings);
+  });
+  loadSettings();
+  lastLang = document.getElementById("cfgLang").value;
+  lastTemplate = document.getElementById("cfgTemplate").value;
+  document.getElementById("btnReset").addEventListener("click", function () {
+    PERSIST.forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el.tagName === "SELECT") el.selectedIndex = 0; else el.value = el.defaultValue;
+    });
+    lastLang = "ar";
+    lastTemplate = "tech";
+    try { localStorage.removeItem(STORE_KEY); } catch (e) {}
+    var lg = document.getElementById("cfgLogo"); lg.value = "";
+    lg.dispatchEvent(new Event("change"));
+    syncColorLabels();
+  });
+
+  var userImageURL = null;
+  var userImageEl = null;
+
+  document.getElementById("cfgLogo").addEventListener("change", function (e) {
+    var lp = document.getElementById("logoPrev");
+    lp.hidden = true; lp.removeAttribute("src");
+    if (userImageURL) { try { URL.revokeObjectURL(userImageURL); } catch (_) {} userImageURL = null; userImageEl = null; }
+    var file = e.target.files && e.target.files[0];
+    if (!file) return;
+    if (!/^image\/(png|jpeg)$/.test(file.type)) { alert("الرجاء اختيار صورة PNG أو JPG"); e.target.value = ""; return; }
+    if (file.size > 4 * 1024 * 1024) { alert("حجم الصورة يجب أن يكون أقل من 4 ميغا"); e.target.value = ""; return; }
+    userImageURL = URL.createObjectURL(file);
+    var img = new Image();
+    img.onload = function () { userImageEl = img; lp.src = userImageURL; lp.hidden = false; };
+    img.onerror = function () { alert("تعذر قراءة الصورة"); };
+    img.src = userImageURL;
+  });
+
+  function waitForFont() {
+    if (!document.fonts) return Promise.resolve();
+    var jobs = [];
+    if (document.fonts.load) {
+      try {
+        jobs.push(document.fonts.load('900 120px Tajawal')["catch"](function () {}));
+        jobs.push(document.fonts.load('700 120px Tajawal')["catch"](function () {}));
+      } catch (e) {}
+    }
+    if (document.fonts.ready) jobs.push(document.fonts.ready["catch"](function () {}));
+    if (!jobs.length) return Promise.resolve();
+    return Promise.race([Promise.all(jobs), new Promise(function (r) { setTimeout(r, 1500); })]);
+  }
+
+  function drawIcon(size, cfg, maskable) {
+    return new Promise(function (resolve, reject) {
+      var c = document.createElement("canvas");
+      c.width = size; c.height = size;
+      var ctx = c.getContext("2d");
+      if (!ctx) return reject(new Error("Canvas 2D غير مدعوم"));
+
+      ctx.fillStyle = "#0A1931";
+      ctx.fillRect(0, 0, size, size);
+
+      if (userImageEl) {
+        var pad = Math.round(size * (maskable ? 0.2 : 0.14));
+        var target = size - pad * 2;
+        var ratio = Math.min(target / userImageEl.width, target / userImageEl.height);
+        var w = userImageEl.width * ratio;
+        var h = userImageEl.height * ratio;
+        ctx.drawImage(userImageEl, (size - w) / 2, (size - h) / 2, w, h);
+        return c.toBlob(function (b) { b ? resolve(b) : reject(new Error("تصدير فشل")); }, "image/png");
+      }
+
+      if (!maskable) {
+        var pad2 = Math.round(size * 0.06);
+        ctx.strokeStyle = cfg.c1;
+        ctx.lineWidth = Math.max(1, Math.round(size * 0.02));
+        ctx.strokeRect(pad2, pad2, size - pad2 * 2, size - pad2 * 2);
+      }
+
+      var g = ctx.createLinearGradient(0, 0, size, size);
+      g.addColorStop(0, cfg.c1);
+      g.addColorStop(1, cfg.c2);
+      ctx.fillStyle = g;
+      ctx.font = "900 " + Math.round(size * (maskable ? 0.4 : 0.52)) + "px Tajawal, system-ui, sans-serif";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      var ch = (cfg.name.trim().charAt(0)) || "س";
+      ctx.fillText(ch, size / 2, size / 2 + size * 0.035);
+
+      c.toBlob(function (b) { b ? resolve(b) : reject(new Error("تصدير فشل")); }, "image/png");
+    });
+  }
+
+  function wrapLines(ctx, text, maxW, maxLines) {
+    var words = String(text).split(/\s+/), lines = [], cur = "";
+    words.forEach(function (w) {
+      var t = cur ? cur + " " + w : w;
+      if (ctx.measureText(t).width <= maxW || !cur) cur = t; else { lines.push(cur); cur = w; }
+    });
+    if (cur) lines.push(cur);
+    if (lines.length > maxLines) { lines = lines.slice(0, maxLines); lines[maxLines - 1] += "…"; }
+    return lines;
+  }
+
+  function drawFeatureGraphic(cfg) {
+    return new Promise(function (resolve, reject) {
+      var W = 1024, H = 500, c = document.createElement("canvas");
+      c.width = W; c.height = H;
+      var ctx = c.getContext("2d");
+      if (!ctx) return reject(new Error("Canvas 2D غير مدعوم"));
+      ctx.fillStyle = "#0A1931"; ctx.fillRect(0, 0, W, H);
+      var g = ctx.createLinearGradient(0, 0, W, H);
+      g.addColorStop(0, cfg.c1); g.addColorStop(1, cfg.c2);
+      ctx.globalAlpha = 0.22; ctx.fillStyle = g; ctx.fillRect(0, 0, W, H); ctx.globalAlpha = 1;
+      ctx.beginPath(); ctx.arc(W - 40, 40, 230, 0, Math.PI * 2); ctx.globalAlpha = 0.12; ctx.fillStyle = g; ctx.fill(); ctx.globalAlpha = 1;
+      ctx.direction = cfg.lang === "en" ? "ltr" : "rtl";
+      ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      var fam = (cfg.lang === "en" ? "Inter" : "Tajawal") + ", system-ui, sans-serif";
+      var y = 250 - 20;
+      if (userImageEl) {
+        var box = 150, r = Math.min(box / userImageEl.width, box / userImageEl.height);
+        var w = userImageEl.width * r, h = userImageEl.height * r;
+        ctx.drawImage(userImageEl, (W - w) / 2, 40 + (box - h) / 2, w, h);
+        y = 290;
+      }
+      ctx.fillStyle = "#FFFFFF"; ctx.font = "900 78px " + fam;
+      var name = cfg.name; while (ctx.measureText(name).width > 880 && name.length > 4) name = name.slice(0, -1);
+      ctx.fillText(name, W / 2, y);
+      ctx.fillStyle = "rgba(255,255,255,.72)"; ctx.font = "700 34px " + fam;
+      var lines = wrapLines(ctx, cfg.tagline, 860, 2);
+      lines.forEach(function (ln, i) { ctx.fillText(ln, W / 2, y + 78 + i * 46); });
+      var bar = ctx.createLinearGradient(W / 2 - 90, 0, W / 2 + 90, 0);
+      bar.addColorStop(0, cfg.c1); bar.addColorStop(1, cfg.c2);
+      ctx.fillStyle = bar; ctx.fillRect(W / 2 - 90, H - 56, 180, 8);
+      c.toBlob(function (b) { b ? resolve(b) : reject(new Error("تصدير فشل")); }, "image/png");
+    });
+  }
+  function makeFeatureGraphic(cfg) {
+    return waitForFont().then(function () { return drawFeatureGraphic(cfg); }).then(blobToU8);
+  }
+
+  function blobToU8(blob) { return blob.arrayBuffer().then(function (b) { return new Uint8Array(b); }); }
+
+  var iconsCacheKey = "";
+  var iconsCache = null;
+
+  function getIcons(cfg) {
+    var key = cfg.name + "|" + cfg.c1 + "|" + cfg.c2 + "|" + (userImageEl ? userImageEl.src : "noimg");
+    if (iconsCache && iconsCacheKey === key) return Promise.resolve(iconsCache);
+    return waitForFont().then(function () {
+      var jobs = ICON_SIZES.map(function (s) {
+        return drawIcon(s, cfg, false).then(function (blob) {
+          return blobToU8(blob).then(function (u8) { return { size: s, data: u8 }; });
+        });
+      });
+      MASKABLE_SIZES.forEach(function (s) {
+        jobs.push(drawIcon(s, cfg, true).then(function (blob) {
+          return blobToU8(blob).then(function (u8) { return { size: "maskable-" + s, data: u8 }; });
+        }));
+      });
+      return Promise.all(jobs);
+    }).then(function (arr) {
+      var out = {};
+      arr.forEach(function (it) { out[it.size] = it.data; });
+      iconsCache = out; iconsCacheKey = key;
+      return out;
+    });
+  }
+
+  function loadScript(src) {
+    return new Promise(function (resolve, reject) {
+      var s = document.createElement("script");
+      s.src = src; s.async = true;
+      s.onload = function () { resolve(true); };
+      s.onerror = function () { try { s.remove(); } catch (e) {} reject(new Error("فشل تحميل " + src)); };
+      document.head.appendChild(s);
+    });
+  }
+  var jszipPromise = null;
+  function ensureJSZip() {
+    if (window.JSZip) return Promise.resolve(true);
+    if (jszipPromise) return jszipPromise;
+    var urls = [
+      "https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js",
+      "https://unpkg.com/jszip@3.10.1/dist/jszip.min.js",
+      "https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"
+    ];
+    jszipPromise = (async function () {
+      for (var i = 0; i < urls.length; i++) {
+        try { await loadScript(urls[i]); if (window.JSZip) return true; } catch (e) {}
+      }
+      jszipPromise = null; return false;
+    })();
+    return jszipPromise;
+  }
+
+  function generateAppHTML(cfg) {
+    var N  = escapeHTML(cfg.name);
+    var WA = cfg.wa;
+    var c1 = cfg.c1, c2 = cfg.c2;
+    var initial = escapeHTML(cfg.name.trim().charAt(0) || "س");
+    var TAG = escapeHTML(cfg.tagline), ABOUT = escapeHTML(cfg.about);
+    var T = I18N[cfg.lang] || I18N.ar;
+    var DIR = cfg.lang === "en" ? "ltr" : "rtl";
+    var FONT = cfg.lang === "en" ? '"Inter"' : '"Tajawal"';
+
+    var s = [];
+    s.push('<!DOCTYPE html>');
+    s.push('<html lang="' + cfg.lang + '" dir="' + DIR + '">');
+    s.push('<head>');
+    s.push('<meta charset="UTF-8">');
+    s.push('<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">');
+    s.push('<meta name="theme-color" content="#0A1931">');
+    s.push('<meta name="description" content="' + N + '">');
+    s.push('<meta name="apple-mobile-web-app-capable" content="yes">');
+    s.push('<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">');
+    s.push('<meta name="apple-mobile-web-app-title" content="' + escapeHTML(cfg.name.trim().substring(0, 15)) + '">');
+    s.push('<link rel="apple-touch-icon" href="./icons/icon-192x192.png">');
+    s.push('<link rel="icon" type="image/png" href="./icons/icon-192x192.png">');
+    s.push('<link rel="manifest" href="./manifest.json">');
+    s.push('<title>' + N + '</title>');
+    s.push('<link rel="preconnect" href="https://fonts.googleapis.com">');
+    s.push('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>');
+    s.push(cfg.lang === "en"
+      ? '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">'
+      : '<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">');
+    s.push('<style>');
+    s.push('*,*::before,*::after{box-sizing:border-box}');
+    s.push('html,body{margin:0;padding:0}');
+    s.push('body{background:#050A1A;color:#fff;min-height:100vh;position:relative;overflow-x:hidden;');
+    s.push('padding-bottom:100px;overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;');
+    s.push('font-family:' + FONT + ',system-ui,sans-serif;-webkit-font-smoothing:antialiased}');
+    s.push('a{text-decoration:none;color:inherit}button{font-family:inherit}');
+    s.push('.orb{position:fixed;border-radius:50%;filter:blur(60px);opacity:.55;pointer-events:none;z-index:0;animation:float 8s ease-in-out infinite}');
+    s.push('@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}');
+    s.push('.orb1{width:340px;height:340px;background:rgba(59,130,246,.22);top:-90px;right:-90px}');
+    s.push('.orb2{width:280px;height:280px;background:rgba(245,158,11,.18);top:45%;left:-110px;animation-delay:2s}');
+    s.push('.orb3{width:420px;height:420px;background:rgba(37,99,235,.14);bottom:-140px;right:-90px;animation-delay:4s}');
+    s.push('.glass{background:rgba(255,255,255,.06);-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.1)}');
+    s.push('.grad{background:linear-gradient(135deg,' + c1 + ' 0%,' + c2 + ' 100%)}');
+    s.push('.grad-text{background:linear-gradient(135deg,' + c1 + ',' + c2 + ');-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}');
+    s.push('header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.06)}');
+    s.push('header .brand{display:flex;align-items:center;gap:11px}');
+    s.push('.logo-sq{width:38px;height:38px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-weight:900;color:#000;font-size:17px;flex:0 0 auto}');
+    s.push('.brand-name{font-weight:900;font-size:15px;line-height:1.1;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}');
+    s.push('.install{border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:99px;padding:7px 13px;font-size:12px;font-weight:800;cursor:pointer;margin-inline-start:auto}.install[hidden]{display:none}');
+    s.push('.avatar{width:34px;height:34px;border-radius:50%;overflow:hidden;border:1px solid rgba(255,255,255,.2);flex:0 0 auto}');
+    s.push('.avatar img{width:100%;height:100%;object-fit:cover;display:block}');
+    s.push('main{position:relative;z-index:10;padding:22px 18px 0;max-width:520px;margin:0 auto}');
+    s.push('.tab-content{display:none;animation:fade .28s ease}');
+    s.push('.tab-content.active{display:block}');
+    s.push('@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}');
+    s.push('.hero{border-radius:30px;padding:24px;position:relative;overflow:hidden}');
+    s.push('.pill{display:inline-flex;align-items:center;gap:6px;padding:6px 13px;border-radius:99px;font-size:11px;color:#BFDBFE;font-weight:700;margin-bottom:16px}');
+    s.push('.hero h1{font-size:28px;font-weight:900;line-height:1.15;margin:0 0 12px;word-break:break-word}');
+    s.push('.hero p.lead{color:rgba(255,255,255,.6);font-size:14px;line-height:1.85;margin:0 0 18px;font-weight:500}');
+    s.push('.hero-logo{width:124px;height:124px;margin:6px auto 20px;position:relative}');
+    s.push('.hero-logo .glow{position:absolute;inset:0;border-radius:50%;filter:blur(26px);opacity:.45}');
+    s.push('.hero-logo img{position:relative;width:100%;height:100%;object-fit:contain;border-radius:50%;border:2px solid rgba(255,255,255,.1);background:#0A1931}');
+    s.push('.cta{display:grid;grid-template-columns:1fr 1fr;gap:12px}');
+    s.push('.cta a{display:flex;align-items:center;justify-content:center;gap:6px;padding:15px 10px;border-radius:18px;font-weight:900;font-size:14px;border:0;cursor:pointer;color:#fff}');
+    s.push('.cta .primary{color:#000}');
+    s.push('.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}');
+    s.push('.stat{border-radius:18px;padding:14px 8px;text-align:center}');
+    s.push('.stat b{display:block;font-size:19px;font-weight:900}');
+    s.push('.stat span{font-size:10px;color:rgba(255,255,255,.5);font-weight:700}');
+    s.push('h2.page-title{font-size:24px;font-weight:900;margin:0 0 18px}');
+    s.push('.card-svc{border-radius:22px;padding:18px;margin-bottom:14px}');
+    s.push('.svc-head{display:flex;gap:13px;align-items:flex-start}');
+    s.push('.svc-icon{width:48px;height:48px;border-radius:15px;display:flex;align-items:center;justify-content:center;font-size:21px;flex:0 0 auto;color:#000}');
+    s.push('.svc-head h3{margin:0;font-size:16px;font-weight:900}');
+    s.push('.svc-head p{margin:4px 0 0;font-size:12px;color:rgba(255,255,255,.5);font-weight:700}');
+    s.push('.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}');
+    s.push('.chip{font-size:10.5px;padding:5px 11px;border-radius:99px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);font-weight:700;color:rgba(255,255,255,.75)}');
+    s.push('.box{border-radius:22px;padding:20px;margin-bottom:16px}');
+    s.push('.box p{margin:0;font-size:14px;line-height:1.95;color:rgba(255,255,255,.72);font-weight:500}');
+    s.push('.info-chip{margin-top:16px;padding:13px;border-radius:14px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.22);font-size:12.5px;font-weight:700;color:#BFDBFE}');
+    s.push('.row{display:flex;align-items:center;gap:14px;border-radius:20px;padding:16px;margin-bottom:12px}');
+    s.push('.row .ico{width:46px;height:46px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:20px;flex:0 0 auto}');
+    s.push('.row b{display:block;font-size:15px;font-weight:900}');
+    s.push('.row span{display:block;font-size:12.5px;color:rgba(255,255,255,.6);margin-top:2px;font-weight:700}');
+    s.push('form{border-radius:24px;padding:20px}');
+    s.push('form input,form select,form textarea{width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:14px 15px;font-size:14px;color:#fff;outline:none;font-family:inherit;margin-bottom:12px;font-weight:500}');
+    s.push('form input::placeholder,form textarea::placeholder{color:rgba(255,255,255,.32)}');
+    s.push('form input:focus,form select:focus,form textarea:focus{border-color:' + c1 + '}');
+    s.push('form select{background-color:#0A1931}');
+    s.push('form textarea{resize:vertical;min-height:104px}');
+    s.push('form button.submit{width:100%;border:0;border-radius:15px;padding:17px;font-weight:900;font-size:15px;color:#000;cursor:pointer;font-family:inherit}');
+    s.push('nav.bottom{position:fixed;bottom:0;left:0;right:0;z-index:60;padding:10px 12px calc(10px + env(safe-area-inset-bottom))}');
+    s.push('.nav-inner{max-width:430px;margin:0 auto;border-radius:28px;padding:8px 6px;display:flex;justify-content:space-around;align-items:center}');
+    s.push('.tab-btn{background:none;border:0;display:flex;flex-direction:column;align-items:center;gap:4px;padding:9px 16px;border-radius:18px;color:rgba(255,255,255,.5);cursor:pointer;transition:color .18s ease}');
+    s.push('.tab-btn .ti{font-size:19px;line-height:1}');
+    s.push('.tab-btn .tl{font-size:10px;font-weight:800}');
+    s.push('.tab-btn.tab-active{color:' + c1 + '}');
+    s.push('@media(max-width:360px){.hero h1{font-size:24px}.tab-btn{padding:8px 10px}}');
+    s.push('<\/style>');
+    s.push('</head>');
+    s.push('<body>');
+    s.push('<div class="orb orb1"><\/div><div class="orb orb2"><\/div><div class="orb orb3"><\/div>');
+    s.push('<header class="glass">');
+    s.push('  <div class="brand">');
+    s.push('    <div class="logo-sq grad">' + initial + '</div>');
+    s.push('    <div><div class="brand-name grad-text">' + N + '</div></div>');
+    s.push('  </div>');
+    s.push('  <button id="installBtn" class="install glass" type="button" hidden>' + T.install + '</button>');
+    s.push('  <div class="avatar"><img src="./icons/icon-192x192.png" alt="logo"><\/div>');
+    s.push('</header>');
+    s.push('<main>');
+    s.push('  <section id="homeTab" class="tab-content active">');
+    s.push('    <div class="hero glass">');
+    s.push('      <div class="pill">✦ ' + N + '</div>');
+    s.push('      <h1><span class="grad-text">' + N + '</span></h1>');
+    s.push('      <p class="lead">' + TAG + '</p>');
+    s.push('      <div class="hero-logo"><div class="glow grad"><\/div><img src="./icons/icon-512x512.png" alt="logo"><\/div>');
+    s.push('      <div class="cta">');
+    s.push('        <a class="primary grad" href="https://wa.me/' + WA + '" target="_blank" rel="noopener">' + T.waDirect + '</a>');
+    s.push('        <a class="glass" href="tel:' + WA + '">' + T.call + '</a>');
+    s.push('      </div>');
+    s.push('    </div>');
+    if (cfg.stats.length) {
+      s.push('    <div class="stats" style="grid-template-columns:repeat(' + cfg.stats.length + ',1fr)">');
+      cfg.stats.forEach(function (st, i) {
+        var col = i === 0 ? c1 : (i === 1 ? '#60A5FA' : '#fff');
+        s.push('      <div class="stat glass"><b style="color:' + col + '">' + escapeHTML(st.value) + '</b><span>' + escapeHTML(st.label) + '</span></div>');
+      });
+      s.push('    </div>');
+    }
+    s.push('  </section>');
+    s.push('  <section id="servicesTab" class="tab-content">');
+    s.push('    <h2 class="page-title">' + T.servicesTitle + '</h2>');
+    s.push('    <div id="servicesList"><\/div>');
+    s.push('  </section>');
+    s.push('  <section id="aboutTab" class="tab-content">');
+    s.push('    <h2 class="page-title">' + T.aboutTitle + '</h2>');
+    s.push('    <div class="box glass">');
+    s.push('      <p>' + ABOUT + '</p>');
+    s.push('      <div class="info-chip">' + T.waInfo + WA + '</div>');
+    s.push('    </div>');
+    s.push('  </section>');
+    s.push('  <section id="contactTab" class="tab-content">');
+    s.push('    <h2 class="page-title">' + T.contactTitle + '</h2>');
+    s.push('    <a class="row glass" href="https://wa.me/' + WA + '" target="_blank" rel="noopener">');
+    s.push('      <div class="ico" style="background:#22C55E">💬</div>');
+    s.push('      <div><b>' + T.waLabel + '</b><span dir="ltr">+' + WA + '</span></div>');
+    s.push('    </a>');
+    s.push('    <a class="row glass" href="tel:' + WA + '">');
+    s.push('      <div class="ico grad">📞</div>');
+    s.push('      <div><b>' + T.callDirect + '</b><span dir="ltr">' + WA + '</span></div>');
+    s.push('    </a>');
+    s.push('    <form id="contactForm" class="glass">');
+    s.push('      <input id="cName" type="text" placeholder="' + T.phName + '" autocomplete="name">');
+    s.push('      <input id="cPhone" type="tel" placeholder="' + T.phPhone + '" autocomplete="tel">');
+    s.push('      <select id="cService">');
+    s.push('        ' + cfg.services.map(function (x) { return '<option>' + escapeHTML(x.title) + '</option>'; }).join(''));
+    s.push('      </select>');
+    s.push('      <textarea id="cMsg" placeholder="' + T.phMsg + '"><\/textarea>');
+    s.push('      <button type="submit" class="submit grad">' + T.submit + '</button>');
+    s.push('    </form>');
+    s.push('  </section>');
+    s.push('</main>');
+    s.push('<nav class="bottom">');
+    s.push('  <div class="nav-inner glass">');
+    s.push('    <button class="tab-btn tab-active" data-tab="home"><span class="ti">🏠</span><span class="tl">' + T.home + '</span></button>');
+    s.push('    <button class="tab-btn" data-tab="services"><span class="ti">⚙️</span><span class="tl">' + T.services + '</span></button>');
+    s.push('    <button class="tab-btn" data-tab="about"><span class="ti">👤</span><span class="tl">' + T.about + '</span></button>');
+    s.push('    <button class="tab-btn" data-tab="contact"><span class="ti">💬</span><span class="tl">' + T.contact + '</span></button>');
+    s.push('  </div>');
+    s.push('</nav>');
+    s.push('<script>');
+    s.push('(function(){');
+    s.push('  "use strict";');
+    s.push('  var WA = "' + WA + '";');
+    s.push('  var L = ' + jsonForScript({ alertMsg: T.alertMsg, hello: T.hello, fName: T.fName, fPhone: T.fPhone, fService: T.fService, fDetails: T.fDetails }) + ';');
+    s.push('  var services = ' + jsonForScript(cfg.services) + ';');
+    s.push('  var list = document.getElementById("servicesList");');
+    s.push('  function mk(tag, cls, txt){ var e=document.createElement(tag); if(cls) e.className=cls; if(txt!=null) e.textContent=txt; return e; }');
+    s.push('  services.forEach(function(sv){');
+    s.push('    var el = mk("article","card-svc glass");');
+    s.push('    var head = mk("div","svc-head");');
+    s.push('    head.appendChild(mk("div","svc-icon grad",sv.icon));');
+    s.push('    var tx = mk("div"); tx.appendChild(mk("h3",null,sv.title)); if (sv.desc) tx.appendChild(mk("p",null,sv.desc));');
+    s.push('    head.appendChild(tx); el.appendChild(head);');
+    s.push('    if (sv.features.length){ var ch = mk("div","chips"); sv.features.forEach(function(f){ ch.appendChild(mk("span","chip",f)); }); el.appendChild(ch); }');
+    s.push('    list.appendChild(el);');
+    s.push('  });');
+    s.push('  var btns = document.querySelectorAll(".tab-btn");');
+    s.push('  for (var i=0;i<btns.length;i++){');
+    s.push('    (function(b){');
+    s.push('      b.addEventListener("click", function(){');
+    s.push('        var j; for (j=0;j<btns.length;j++) btns[j].classList.remove("tab-active");');
+    s.push('        var panels = document.querySelectorAll(".tab-content");');
+    s.push('        for (j=0;j<panels.length;j++) panels[j].classList.remove("active");');
+    s.push('        b.classList.add("tab-active");');
+    s.push('        var panel = document.getElementById(b.getAttribute("data-tab")+"Tab");');
+    s.push('        if (panel) panel.classList.add("active");');
+    s.push('        if (navigator.vibrate) try { navigator.vibrate(20); } catch(e){}');
+    s.push('        window.scrollTo({top:0,behavior:"smooth"});');
+    s.push('      });');
+    s.push('    })(btns[i]);');
+    s.push('  }');
+    s.push('  document.getElementById("contactForm").addEventListener("submit", function(e){');
+    s.push('    e.preventDefault();');
+    s.push('    var n = document.getElementById("cName").value.trim();');
+    s.push('    var p = document.getElementById("cPhone").value.trim();');
+    s.push('    var sv = document.getElementById("cService").value;');
+    s.push('    var m = document.getElementById("cMsg").value.trim();');
+    s.push('    if (!n || !p) { alert(L.alertMsg); return; }');
+    s.push('    var txt = [L.hello,L.fName+n,L.fPhone+p,L.fService+sv,L.fDetails+(m||"—")].join("\\n");');
+    s.push('    window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(txt), "_blank","noopener");');
+    s.push('  });');
+    s.push('  function openTab(name){');
+    s.push('    var t = document.querySelector(\'.tab-btn[data-tab="\'+name+\'"]\');');
+    s.push('    if (t) t.click();');
+    s.push('  }');
+    s.push('  try { var q = new URLSearchParams(location.search).get("tab"); if (q) openTab(q); } catch(e){}');
+    s.push('  var dp = null, ib = document.getElementById("installBtn");');
+    s.push('  window.addEventListener("beforeinstallprompt", function(e){ e.preventDefault(); dp = e; ib.hidden = false; });');
+    s.push('  ib.addEventListener("click", function(){ if(!dp) return; dp.prompt(); dp.userChoice.then(function(){ dp = null; ib.hidden = true; }); });');
+    s.push('  window.addEventListener("appinstalled", function(){ ib.hidden = true; });');
+    s.push('  if ("serviceWorker" in navigator){');
+    s.push('    window.addEventListener("load", function(){');
+    s.push('      try { navigator.serviceWorker.register("./sw.js")["catch"](function(){}); } catch(e){}');
+    s.push('    });');
+    s.push('  }');
+    s.push('})();');
+    s.push('<\/script>');
+    s.push('</body>');
+    s.push('</html>');
+    return s.join("\n");
+  }
+
+  function buildManifest(cfg) {
+    return {
+      name: cfg.name,
+      short_name: cfg.name.substring(0, 12),
+      description: cfg.name + (I18N[cfg.lang] || I18N.ar).mDesc,
+      start_url: "./",
+      scope: "./",
+      display: "standalone",
+      display_override: ["standalone", "minimal-ui"],
+      background_color: "#050A1A",
+      theme_color: "#0A1931",
+      orientation: "any",
+      lang: cfg.lang,
+      dir: cfg.lang === "en" ? "ltr" : "rtl",
+      categories: ["business", "technology"],
+      icons: ICON_SIZES.map(function (s) {
+        return { src: "icons/icon-" + s + "x" + s + ".png", sizes: s + "x" + s,
+                 type: "image/png", purpose: "any" };
+      }).concat(MASKABLE_SIZES.map(function (s) {
+        return { src: "icons/icon-maskable-" + s + ".png", sizes: s + "x" + s,
+                 type: "image/png", purpose: "maskable" };
+      })),
+      shortcuts: [
+        { name: (I18N[cfg.lang] || I18N.ar).mWa, short_name: (I18N[cfg.lang] || I18N.ar).mWa, url: "https://wa.me/" + cfg.wa,
+          icons: [{ src: "icons/icon-192x192.png", sizes: "192x192", type: "image/png" }] },
+        { name: (I18N[cfg.lang] || I18N.ar).mSv, short_name: (I18N[cfg.lang] || I18N.ar).mSv, url: "./?tab=services",
+          icons: [{ src: "icons/icon-192x192.png", sizes: "192x192", type: "image/png" }] }
+      ]
+    };
+  }
+
+  function buildSW() {
+    var stamp = Date.now().toString(36);
+    return [
+'var CACHE = "pwa-' + stamp + '";',
+'var CORE = ["./","./index.html","./manifest.json","./icons/icon-192x192.png","./icons/icon-512x512.png"];',
+'self.addEventListener("install", function(e){',
+'  e.waitUntil((async function(){',
+'    var c = await caches.open(CACHE);',
+'    await Promise.allSettled(CORE.map(function(u){return c.add(u);}));',
+'    await self.skipWaiting();',
+'  })());',
+'});',
+'self.addEventListener("activate", function(e){',
+'  e.waitUntil(caches.keys().then(function(keys){',
+'    return Promise.all(keys.filter(function(k){return k!==CACHE;}).map(function(k){return caches.delete(k);}));',
+'  }).then(function(){return self.clients.claim();}));',
+'});',
+'self.addEventListener("fetch", function(e){',
+'  var req = e.request;',
+'  if (req.method !== "GET") return;',
+'  if (req.mode === "navigate") {',
+'    e.respondWith((async function(){',
+'      try {',
+'        var net = await fetch(req);',
+'        if (net && net.status === 200) { var cp = net.clone(); caches.open(CACHE).then(function(c){c.put("./index.html", cp)["catch"](function(){});}); }',
+'        return net;',
+'      } catch (err) {',
+'        var fb = await caches.match("./index.html", {cacheName: CACHE});',
+'        return fb || new Response("Offline", {status:503, statusText:"Offline"});',
+'      }',
+'    })());',
+'    return;',
+'  }',
+'  e.respondWith((async function(){',
+'    var hit = await caches.match(req, {cacheName: CACHE});',
+'    if (hit) return hit;',
+'    try {',
+'      var res = await fetch(req);',
+'      if (res && (res.status === 200 || res.type === "opaque")) {',
+'        var copy = res.clone();',
+'        caches.open(CACHE).then(function(c){c.put(req, copy)["catch"](function(){});});',
+'      }',
+'      return res;',
+'    } catch (err) {',
+'      return new Response("", {status:503, statusText:"Offline"});',
+'    }',
+'  })());',
+'});'
+    ].join("\n");
+  }
+
+  var HEADERS_TXT = [
+'/index.html', '  Cache-Control: no-cache',
+'/sw.js', '  Cache-Control: no-cache',
+'/manifest.json', '  Cache-Control: no-cache',
+'/.well-known/assetlinks.json', '  Content-Type: application/json', '  Access-Control-Allow-Origin: *'
+  ].join("\n") + "\n";
+
+  function buildPWAReadme(cfg) {
+    return [
+'# ' + cfg.name + ' — حزمة PWA',
+'',
+'## المحتوى',
+'- `index.html` — واجهة التطبيق (4 تبويبات)',
+'- `manifest.json` — بيانات التطبيق',
+'- `sw.js` — Service Worker (offline)',
+'- `icons/` — 8 مقاسات (72 → 512) + أيقونتا maskable',
+'',
+'## النشر (30 ثانية)',
+'1. افتح https://app.netlify.com/drop',
+'2. اسحب المجلد كاملًا',
+'3. انسخ الرابط الظاهر',
+'',
+'## التثبيت',
+'- Android/Chrome: القائمة ← «تثبيت التطبيق»',
+'- iPhone/Safari: مشاركة ← «إضافة إلى الشاشة الرئيسية»',
+'',
+'## بيانات التطبيق',
+'- الاسم: ' + cfg.name,
+'- واتساب: +' + cfg.wa,
+'- اللون الرئيسي: ' + cfg.c1,
+'- اللون الثانوي: ' + cfg.c2,
+'',
+'## بعد أي تعديل',
+'- أعد توليد الحزمة: كل توليد يحمل رقم كاش جديدًا تلقائيًا فتصل التحديثات للمستخدمين',
+'- ملف `_headers` (Netlify) يمنع تخزين index/sw/manifest طويلًا',
+    ].join("\n");
+  }
+
+  function buildStoreReadme(cfg) {
+    return [
+'# ' + cfg.name + ' — حزمة الرفع للمتاجر',
+'',
+'## المحتوى',
+'- `BUILD-AAB.md` + `build-aab.sh` — بناء ملف AAB خطوة بخطوة (بأمر واحد)',
+'- `store-assets/` — أيقونة 512 و Feature graphic و نصوص المتجر وقالب سياسة الخصوصية',
+'- `www/` — التطبيق جاهز للنشر (يتضمن `.well-known/assetlinks.json`)',
+'- `.well-known/assetlinks.json` — للتحقق من TWA',
+'- `capacitor.config.json` — إعدادات Capacitor',
+'- `package.json` — التبعيات',
+'- `twa-manifest.json` — إعدادات TWA',
+'',
+'## PWABuilder (الأسرع)',
+'1. ارفع محتوى `www/` على Netlify',
+'2. https://www.pwabuilder.com — الصق الرابط',
+'3. Android → .aab | iOS → مشروع Xcode → Archive',
+'',
+'## Capacitor (تحكم كامل)',
+'  npm install',
+'  npx cap add android',
+'  npx cap add ios',
+'  npx cap sync',
+'  npx cap open android',
+'',
+'## ⚠️ مهم قبل النشر',
+'- معرّف الحزمة: `' + cfg.pkg + '` — يجب أن يطابق ما ستسجله في Google Play',
+'- النطاق: ' + cfg.host + ' — انشر محتوى `www/` عليه قبل بناء TWA',
+(cfg.sha ? '- بصمة SHA256 مُدخلة في assetlinks.json (تأكد أنها بصمة مفتاح الرفع/التوقيع الصحيح)'
+         : '- استبدل SHA256 في assetlinks.json ببصمة مفتاحك الحقيقي\n  (تحصل عليه بـ: `keytool -list -v -keystore my.keystore`)'),
+'- استخدم AAB وليس APK لمتجر Play',
+'',
+'## الإعدادات الحالية',
+'- الاسم: ' + cfg.name,
+'- الواتساب: +' + cfg.wa,
+    ].join("\n");
+  }
+
+  function safeLabel(x) { return String(x).replace(/[^\w\u0600-\u06FF .\-]/g, "").trim(); }
+
+  function buildAabScript(cfg) {
+    return [
+'#!/usr/bin/env bash',
+'# سكربت بناء AAB — ' + safeLabel(cfg.name),
+'set -euo pipefail',
+'cd "$(dirname "$0")"',
+'',
+'PKG="' + cfg.pkg + '"',
+'HOST="' + cfg.host + '"',
+'KEYSTORE="./android.keystore"',
+'ALIAS="android"',
+'',
+'need() { command -v "$1" >/dev/null 2>&1 || { echo "❌ مطلوب: $1 — $2"; exit 1; }; }',
+'need node "ثبّت Node.js 18+ من https://nodejs.org"',
+'need npx "يأتي مع Node.js"',
+'',
+'echo "1/5 فحص الموقع https://$HOST ..."',
+'if command -v curl >/dev/null 2>&1; then',
+'  curl -fsI "https://$HOST/manifest.json" >/dev/null || { echo "❌ الموقع غير منشور على https://$HOST — انشر محتوى www/ أولًا"; exit 1; }',
+'  curl -fsI "https://$HOST/icons/icon-512x512.png" >/dev/null || { echo "❌ الأيقونات غير متاحة على الموقع"; exit 1; }',
+'fi',
+'',
+'echo "2/5 مفتاح التوقيع ..."',
+'if [ ! -f "$KEYSTORE" ]; then',
+'  need keytool "ثبّت JDK 17+ (https://adoptium.net)"',
+'  echo "سيطلب keytool كلمة مرور وبياناتك — احفظ الملف وكلمة المرور بأمان (فقدانهما = لا يمكن تحديث التطبيق)"',
+'  keytool -genkeypair -v -keystore "$KEYSTORE" -alias "$ALIAS" -keyalg RSA -keysize 2048 -validity 10000',
+'fi',
+'if command -v keytool >/dev/null 2>&1; then',
+'  echo ""',
+'  echo "بصمة SHA256 لمفتاحك (ضعها في .well-known/assetlinks.json ثم أعد النشر):"',
+'  keytool -list -v -keystore "$KEYSTORE" -alias "$ALIAS" | grep "SHA256:" || true',
+'  read -r -p "اضغط Enter بعد تحديث assetlinks.json وإعادة النشر ... " _ || true',
+'fi',
+'',
+'echo "3/5 فحص bubblewrap ..."',
+'BV_VER=$(npx --yes @bubblewrap/cli --version 2>/dev/null || true)',
+'if [ -z "$BV_VER" ]; then',
+'  echo "❌ تعذّر تشغيل @bubblewrap/cli — تحقق من اتصال الإنترنت"',
+'  exit 1',
+'fi',
+'echo "   الإصدار: $BV_VER"',
+'if [ ! -f "twa-manifest.json" ]; then',
+'  echo "❌ twa-manifest.json غير موجود في هذا المجلد — شغّل أولًا:"',
+'  echo "   npx @bubblewrap/cli init --manifest=https://$HOST/manifest.json"',
+'  exit 1',
+'fi',
+'',
+'echo "4/5 بناء الحزمة (أول تشغيل ينزّل JDK و Android SDK تلقائيًا) ..."',
+'npx --yes @bubblewrap/cli build',
+'',
+'echo "5/5 تم. الملفات الناتجة:"',
+'ls -1 ./*.aab ./*.apk 2>/dev/null || true',
+'echo "ارفع ملف .aab في Google Play Console ← Internal testing ثم Production"'
+    ].join("\n") + "\n";
+  }
+
+  function buildAabGuide(cfg) {
+    var fp = cfg.sha || "REPLACE_WITH_YOUR_SHA256_FINGERPRINT";
+    return [
+'# دليل بناء AAB — ' + cfg.name,
+'',
+'معرّف الحزمة: `' + cfg.pkg + '` — النطاق: `https://' + cfg.host + '`',
+'',
+'## المتطلبات',
+'- Node.js 18+ — و JDK 17+ (أو اترك Bubblewrap ينزّله تلقائيًا عند أول تشغيل)',
+'- حساب Google Play Developer (رسم تسجيل لمرة واحدة)',
+'- Linux / macOS، أو Windows عبر WSL أو Git Bash',
+'',
+'## الخطوة 0 — انشر الموقع',
+'1. انشر محتوى `www/` على `https://' + cfg.host + '` (زر «نشر مباشر» في المولّد يفعل ذلك).',
+'2. تأكد أن هذه الروابط تعمل: `/manifest.json` و `/icons/icon-512x512.png` و `/.well-known/assetlinks.json`.',
+'',
+'## الخطوة 1 — البناء بأمر واحد',
+'  chmod +x build-aab.sh',
+'  ./build-aab.sh',
+'السكربت: يفحص الموقع ← ينشئ مفتاح التوقيع `android.keystore` (مرة واحدة) ← يعرض بصمة SHA256 ← يفحص bubblewrap و twa-manifest.json ← يشغّل `bubblewrap build` ← يُخرج `app-release-bundle.aab`.',
+'',
+'### أو يدويًا',
+'  keytool -genkeypair -v -keystore android.keystore -alias android -keyalg RSA -keysize 2048 -validity 10000',
+'  keytool -list -v -keystore android.keystore -alias android   # انسخ SHA256',
+'  npx @bubblewrap/cli build',
+'إذا اشتكى من عدم تهيئة المشروع نفّذ مرة واحدة:',
+'  npx @bubblewrap/cli init --manifest=https://' + cfg.host + '/manifest.json',
+'',
+'## الخطوة 2 — ربط الموقع بالتطبيق (Digital Asset Links)',
+'بدونه يظهر شريط المتصفح داخل التطبيق. ضع البصمة في `.well-known/assetlinks.json` ثم أعد النشر:',
+'  package_name: ' + cfg.pkg,
+'  sha256_cert_fingerprints: ' + fp,
+'**مهم:** عند تفعيل Play App Signing (الافتراضي) تستخدم Google مفتاحًا مختلفًا للتوزيع. بعد أول رفع انسخ بصمة «App signing key» من',
+'Play Console ← Test and release ← App integrity، وأضفها بجانب بصمتك (القائمة تقبل أكثر من بصمة).',
+'',
+'## الخطوة 3 — الرفع إلى Google Play',
+'1. Create app ← أدخل الاسم واللغة ← Free/Paid.',
+'2. Internal testing ← Create release ← ارفع `app-release-bundle.aab`.',
+'3. صفحة المتجر: انسخ النصوص من `store-assets/PLAY-LISTING.md`.',
+'4. الأصول الجاهزة: `store-assets/play-icon-512.png` و `store-assets/feature-graphic-1024x500.png` (أضف لقطتي شاشة هاتف على الأقل).',
+'5. سياسة الخصوصية: انشر `store-assets/PRIVACY-POLICY-TEMPLATE.md` كصفحة على موقعك (راجعها قانونيًا) وضع رابطها.',
+'6. أكمل: Content rating، Data safety، Target audience، ثم أرسل للمراجعة.',
+'',
+'## التحديثات لاحقًا',
+'- ارفع `appVersionCode` في `twa-manifest.json` (رقم أكبر في كل نسخة) ثم أعد `./build-aab.sh`.',
+'- احتفظ بنسخة احتياطية من `android.keystore` وكلمة مرورها خارج المشروع.',
+'',
+'## مشاكل شائعة',
+'- **شريط عنوان ظاهر داخل التطبيق:** البصمة في assetlinks.json لا تطابق مفتاح التوقيع، أو الملف غير متاح على النطاق.',
+'- **رفض لأن المعرّف مستخدم:** غيّر Package ID في المولّد وأعد التوليد.',
+'- **فشل بناء Gradle:** تأكد من JDK 17 ومن اتصال الإنترنت في أول تشغيل.',
+'',
+'> هذا الدليل والسكربت مولَّدان تلقائيًا ولم يُشغَّلا على جهازك؛ يحتاجان JDK و Android SDK واتصال إنترنت.'
+    ].join("\n") + "\n";
+  }
+
+  function buildPlayListing(cfg) {
+    var feats = cfg.services.map(function (x) { return "• " + x.title + (x.desc ? " — " + x.desc : ""); }).join("\n");
+    return [
+'# نصوص صفحة Google Play',
+'',
+'## الاسم (حد أقصى 30 حرفًا)',
+clip(cfg.name, 30),
+'',
+'## الوصف القصير (حد أقصى 80 حرفًا)',
+clip(cfg.tagline, 80),
+'',
+'## الوصف الكامل (حد أقصى 4000 حرف)',
+cfg.about,
+'',
+feats,
+'',
+'للتواصل: واتساب +' + cfg.wa,
+'',
+'## قائمة التحقق',
+'- [ ] أيقونة 512×512 (`play-icon-512.png`)',
+'- [ ] Feature graphic 1024×500 (`feature-graphic-1024x500.png`)',
+'- [ ] لقطتا شاشة هاتف على الأقل',
+'- [ ] رابط سياسة الخصوصية',
+'- [ ] Content rating و Data safety و Target audience'
+    ].join("\n") + "\n";
+  }
+
+  function buildPrivacyTemplate(cfg) {
+    return [
+'# سياسة الخصوصية — ' + cfg.name + ' / Privacy Policy',
+'',
+'> نموذج عام — راجعه واعتمده قانونيًا قبل النشر. / Generic template — have it reviewed before publishing.',
+'',
+'## العربية',
+'- لا يجمع التطبيق بيانات شخصية تلقائيًا ولا يستخدم حسابات أو إعلانات أو أدوات تتبّع.',
+'- عند استخدام نموذج «تواصل» يُفتح واتساب برسالة تحتوي ما كتبته (الاسم، الهاتف، الخدمة، التفاصيل) وتُرسل بإرادتك عبر واتساب وتخضع لسياسة واتساب.',
+'- يحفظ التطبيق ملفاته على جهازك للعمل دون إنترنت (ذاكرة التخزين المؤقت).',
+'- للاستفسار: واتساب +' + cfg.wa + '  —  https://' + cfg.host,
+'',
+'## English',
+'- The app does not automatically collect personal data and uses no accounts, ads or trackers.',
+'- When you use the contact form, WhatsApp opens with the text you typed (name, phone, service, details); it is sent by you via WhatsApp and is governed by WhatsApp\'s policy.',
+'- The app stores its files on your device for offline use (cache).',
+'- Contact: WhatsApp +' + cfg.wa + ' — https://' + cfg.host
+    ].join("\n") + "\n";
+  }
+
+  function buildCapConfig(cfg) {
+    return {
+      appId: cfg.pkg,
+      appName: cfg.name,
+      webDir: "www",
+      bundledWebRuntime: false,
+      server: { androidScheme: "https", iosScheme: "https" },
+      plugins: {
+        SplashScreen: {
+          launchShowDuration: 2000,
+          backgroundColor: "#0A1931",
+          showSpinner: false,
+          androidScaleType: "CENTER_CROP"
+        },
+        StatusBar: { backgroundColor: "#050A1A", style: "DARK" }
+      }
+    };
+  }
+
+  function buildPackageJson(cfg) {
+    return {
+      name: cfg.pkg.replace(/\./g, "-"),
+      version: "1.0.0",
+      description: cfg.name,
+      private: true,
+      scripts: {
+        "serve": "npx serve www",
+        "cap:add:android": "npx cap add android",
+        "cap:add:ios": "npx cap add ios",
+        "cap:sync": "npx cap sync",
+        "cap:open:android": "npx cap open android",
+        "cap:open:ios": "npx cap open ios"
+      },
+      dependencies: {
+        "@capacitor/core": "^5.7.0",
+        "@capacitor/android": "^5.7.0",
+        "@capacitor/ios": "^5.7.0",
+        "@capacitor/splash-screen": "^5.0.6",
+        "@capacitor/status-bar": "^5.0.7"
+      }
+    };
+  }
+
+  function buildTwaManifest(cfg) {
+    var T = I18N[cfg.lang] || I18N.ar;
+    return {
+      packageId: cfg.pkg,
+      host: cfg.host,
+      name: cfg.name,
+      launcherName: cfg.name.substring(0, 12),
+      display: "standalone",
+      themeColor: "#0A1931",
+      themeColorDark: "#0A1931",
+      navigationColor: "#050A1A",
+      navigationColorDark: "#050A1A",
+      navigationDividerColor: "#00000000",
+      navigationDividerColorDark: "#00000000",
+      backgroundColor: "#050A1A",
+      enableNotifications: false,
+      startUrl: "/",
+      iconUrl: "https://" + cfg.host + "/icons/icon-512x512.png",
+      maskableIconUrl: "https://" + cfg.host + "/icons/icon-maskable-512.png",
+      webManifestUrl: "https://" + cfg.host + "/manifest.json",
+      appVersionName: "1.0.0",
+      appVersionCode: 1,
+      signingKey: { path: "./android.keystore", alias: "android" },
+      splashScreenFadeOutDuration: 300,
+      enableSiteSettingsShortcut: true,
+      orientation: "default",
+      fallbackType: "customtabs",
+      generatorApp: "bubblewrap-cli",
+      shortcuts: [
+        { name: T.mSv, shortName: T.mSv, url: "/?tab=services",
+          icon: "https://" + cfg.host + "/icons/icon-192x192.png" }
+      ]
+    };
+  }
+
+  function buildAssetLinks(cfg) {
+    return [{
+      relation: ["delegate_permission/common.handle_all_urls"],
+      target: {
+        namespace: "android_app",
+        package_name: cfg.pkg,
+        sha256_cert_fingerprints: [
+          cfg.sha || "REPLACE_WITH_YOUR_SHA256_FINGERPRINT"
+        ]
+      }
+    }];
+  }
+
+  var OPT_TEXT = { compression: "DEFLATE", compressionOptions: { level: 1 } };
+  var OPT_IMG  = { compression: "STORE" };
+
+  function iconFileName(key) {
+    return /^maskable-/.test(key) ? "icon-" + key + ".png" : "icon-" + key + "x" + key + ".png";
+  }
+
+  function buildZipBlob(kind, cfg, onProgress) {
+    return Promise.all([getIcons(cfg), kind === "store" ? makeFeatureGraphic(cfg) : Promise.resolve(null)]).then(function (res) {
+      var icons = res[0], featureGraphic = res[1];
+      var zip = new window.JSZip();
+      var sizes = Object.keys(icons);
+      var appHTML = generateAppHTML(cfg);
+      var manifestJSON = JSON.stringify(buildManifest(cfg), null, 2);
+
+      if (kind === "pwa") {
+        zip.file("index.html", appHTML, OPT_TEXT);
+        zip.file("manifest.json", manifestJSON, OPT_TEXT);
+        zip.file("sw.js", buildSW(), OPT_TEXT);
+        zip.file("_headers", HEADERS_TXT, OPT_TEXT);
+        zip.file("README.md", buildPWAReadme(cfg), OPT_TEXT);
+        zip.file(".well-known/assetlinks.json", JSON.stringify(buildAssetLinks(cfg), null, 2), OPT_TEXT);
+        sizes.forEach(function (s) {
+          zip.file("icons/" + iconFileName(s), icons[s], OPT_IMG);
+        });
+      } else {
+        zip.file("README.md", buildStoreReadme(cfg), OPT_TEXT);
+        zip.file("capacitor.config.json", JSON.stringify(buildCapConfig(cfg), null, 2), OPT_TEXT);
+        zip.file("package.json", JSON.stringify(buildPackageJson(cfg), null, 2), OPT_TEXT);
+        zip.file("twa-manifest.json", JSON.stringify(buildTwaManifest(cfg), null, 2), OPT_TEXT);
+        zip.file(".well-known/assetlinks.json", JSON.stringify(buildAssetLinks(cfg), null, 2), OPT_TEXT);
+        zip.file("BUILD-AAB.md", buildAabGuide(cfg), OPT_TEXT);
+        zip.file("build-aab.sh", buildAabScript(cfg), { compression: "DEFLATE", compressionOptions: { level: 1 }, unixPermissions: "755" });
+        zip.file("store-assets/PLAY-LISTING.md", buildPlayListing(cfg), OPT_TEXT);
+        zip.file("store-assets/PRIVACY-POLICY-TEMPLATE.md", buildPrivacyTemplate(cfg), OPT_TEXT);
+        zip.file("store-assets/feature-graphic-1024x500.png", featureGraphic, OPT_IMG);
+        zip.file("store-assets/play-icon-512.png", icons[512], OPT_IMG);
+        zip.file("www/.well-known/assetlinks.json", JSON.stringify(buildAssetLinks(cfg), null, 2), OPT_TEXT);
+        zip.file("www/index.html", appHTML, OPT_TEXT);
+        zip.file("www/manifest.json", manifestJSON, OPT_TEXT);
+        zip.file("www/sw.js", buildSW(), OPT_TEXT);
+        zip.file("www/_headers", HEADERS_TXT, OPT_TEXT);
+        sizes.forEach(function (s) {
+          zip.file("www/icons/" + iconFileName(s), icons[s], OPT_IMG);
+        });
+      }
+
+      return zip.generateAsync(
+        { type: "blob", mimeType: "application/zip", platform: "UNIX" },
+        function (meta) {
+          if (onProgress && typeof meta.percent === "number") onProgress(meta.percent);
+        }
+      );
+    });
+  }
+
+  var els = {
+    btnPWA: document.getElementById("btnPWA"),
+    btnStore: document.getElementById("btnStore"),
+    statusPWA: document.getElementById("statusPWA"),
+    statusStore: document.getElementById("statusStore"),
+    progPWA: document.getElementById("progPWA"),
+    progStore: document.getElementById("progStore"),
+    diag: document.getElementById("diag")
+  };
+
+  function setStatus(el, text, cls) {
+    el.textContent = text;
+    el.className = "status" + (cls ? " " + cls : "");
+  }
+  function setProgress(barEl, pct) {
+    if (!barEl) return;
+    var fill = barEl.firstElementChild;
+    if (pct <= 0) { barEl.classList.remove("on"); if (fill) fill.style.width = "0%"; return; }
+    barEl.classList.add("on");
+    if (fill) fill.style.width = Math.max(0, Math.min(100, pct)) + "%";
+  }
+  function triggerDownload(blob, filename) {
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url; a.download = filename; a.rel = "noopener"; a.style.display = "none";
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function () { try { a.remove(); } catch (e) {} }, 100);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 10000);
+  }
+
+  function buildAndDownload(kind, filename, btn, statusEl, progEl) {
+    var cfg;
+    try { cfg = readConfig(kind === "store"); }
+    catch (e) { setStatus(statusEl, "❌ " + e.message, "err"); return; }
+    var original = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = "⏳ جاري التحضير…";
+    setProgress(progEl, 0);
+    setStatus(statusEl, "جاري تجهيز JSZip…");
+
+    ensureJSZip()
+      .then(function (ok) {
+        if (!ok) throw new Error("تعذّر تحميل JSZip — تحقق من الاتصال");
+        setStatus(statusEl, "جاري توليد الأيقونات…");
+        return buildZipBlob(kind, cfg, function (pct) {
+          setStatus(statusEl, "جاري الضغط… " + Math.round(pct) + "%");
+          setProgress(progEl, pct);
+        });
+      })
+      .then(function (blob) {
+        if (!blob || blob.size < 512) throw new Error("الملف الناتج غير صالح");
+        triggerDownload(blob, filename);
+        setProgress(progEl, 100);
+        setStatus(statusEl, "✅ تم التحميل (" + Math.round(blob.size / 1024) + " KB)", "ok");
+        setTimeout(function () { setProgress(progEl, 0); }, 2000);
+      })
+      ["catch"](function (err) {
+        console.error("[ZIP]", err);
+        setStatus(statusEl, "❌ " + (err && err.message ? err.message : "فشل"), "err");
+        setProgress(progEl, 0);
+      })
+      .then(function () {
+        btn.disabled = false;
+        btn.textContent = original;
+      });
+  }
+
+  function u8ToB64(u8) {
+    var str = "", CH = 0x8000;
+    for (var i = 0; i < u8.length; i += CH) str += String.fromCharCode.apply(null, u8.subarray(i, i + CH));
+    return btoa(str);
+  }
+  var modal = document.getElementById("modal");
+  var liveCard = document.getElementById("liveCard");
+  var liveFrame = document.getElementById("liveFrame");
+  var liveStatus = document.getElementById("liveStatus");
+  var btnLive = document.getElementById("btnLive");
+  var liveOpen = false;
+  var liveTimer = null;
+  var liveBusy = false;
+  var liveQueued = false;
+
+  function setLiveStatus(text, cls) {
+    if (!liveStatus) return;
+    liveStatus.textContent = text;
+    liveStatus.className = "live-status" + (cls ? " " + cls : "");
+  }
+
+  function buildPreviewHTML(cfg) {
+    return getIcons(cfg).then(function (icons) {
+      var html = generateAppHTML(cfg);
+      [192, 512].forEach(function (z) {
+        if (icons[z]) {
+          html = html.split("./icons/icon-" + z + "x" + z + ".png").join("data:image/png;base64," + u8ToB64(icons[z]));
+        }
+      });
+      return html;
+    });
+  }
+
+  function renderPreview(targetFrame, opts) {
+    opts = opts || {};
+    var cfg;
+    try { cfg = readConfig(false); }
+    catch (e) {
+      if (opts.silent) setLiveStatus("⚠ " + e.message, "err");
+      else alert(e.message);
+      return Promise.reject(e);
+    }
+    if (opts.silent) setLiveStatus("جاري التحديث…");
+    return buildPreviewHTML(cfg).then(function (html) {
+      targetFrame.srcdoc = html;
+      if (opts.silent) setLiveStatus("محدَّث · " + new Date().toLocaleTimeString("ar"), "ok");
+    })["catch"](function (err) {
+      if (opts.silent) setLiveStatus("فشل التحديث: " + (err && err.message ? err.message : ""), "err");
+      else alert("تعذّرت المعاينة: " + (err && err.message ? err.message : ""));
+      throw err;
+    });
+  }
+
+  function refreshLive() {
+    if (!liveOpen && !modal.classList.contains("on")) return;
+    if (liveBusy) { liveQueued = true; return; }
+    liveBusy = true;
+    var jobs = [];
+    if (liveOpen) jobs.push(renderPreview(liveFrame, { silent: true }));
+    if (modal.classList.contains("on")) jobs.push(renderPreview(document.getElementById("pvFrame"), { silent: true }));
+    Promise.all(jobs.map(function (p) { return p["catch"](function () {}); })).then(function () {
+      liveBusy = false;
+      if (liveQueued) { liveQueued = false; scheduleLive(80); }
+    });
+  }
+
+  function scheduleLive(ms) {
+    if (liveTimer) clearTimeout(liveTimer);
+    liveTimer = setTimeout(refreshLive, ms == null ? 450 : ms);
+  }
+
+  function closePreview() {
+    modal.classList.remove("on");
+    document.getElementById("pvFrame").removeAttribute("srcdoc");
+  }
+
+  function toggleLive() {
+    liveOpen = !liveOpen;
+    liveCard.classList.toggle("on", liveOpen);
+    btnLive.textContent = liveOpen ? "⏹ إيقاف المباشرة" : "🔴 معاينة مباشرة";
+    if (liveOpen) {
+      setLiveStatus("جاري التحميل…");
+      refreshLive();
+      try { liveCard.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+    } else {
+      liveFrame.removeAttribute("srcdoc");
+      setLiveStatus("جاهز — عدّل أي حقل للتحديث");
+    }
+  }
+
+  btnLive.addEventListener("click", toggleLive);
+
+  document.getElementById("btnPreview").addEventListener("click", function () {
+    renderPreview(document.getElementById("pvFrame"), { silent: false }).then(function () {
+      modal.classList.add("on");
+    })["catch"](function () {});
+  });
+  document.getElementById("btnClosePv").addEventListener("click", closePreview);
+  modal.addEventListener("click", function (e) { if (e.target === modal) closePreview(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closePreview(); });
+
+  // Live-bind all customization fields
+  var LIVE_IDS = ["cfgTemplate","cfgLang","cfgName","cfgWA","cfgColor1","cfgColor2","cfgTagline","cfgAbout","cfgServices","cfgStats"];
+  LIVE_IDS.forEach(function (id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener("input", function () { scheduleLive(400); });
+    el.addEventListener("change", function () { scheduleLive(200); });
+  });
+  var logoInput = document.getElementById("cfgLogo");
+  if (logoInput) logoInput.addEventListener("change", function () { scheduleLive(600); });
+
+  var NL_API = "https://api.netlify.com/api/v1";
+  function nlMsg(status, j) {
+    if (status === 401) return "التوكن غير صالح أو منتهي";
+    if (status === 404) return "الموقع غير موجود (تحقق من Site ID)";
+    if (status === 409 || status === 422) return "اسم الموقع مستخدم أو غير صالح — جرّب اسمًا آخر";
+    if (status === 429) return "تجاوزت حد الطلبات — حاول بعد قليل";
+    return "خطأ من Netlify (" + status + ")" + (j && j.message ? ": " + j.message : "");
+  }
+  function nlFetch(path, token, opts) {
+    opts = opts || {};
+    opts.headers = Object.assign({ Authorization: "Bearer " + token }, opts.headers || {});
+    return fetch(NL_API + path, opts).then(function (r) {
+      return r.text().then(function (t) {
+        var j = null; try { j = t ? JSON.parse(t) : null; } catch (e) {}
+        if (!r.ok) { var err = new Error(nlMsg(r.status, j)); err.status = r.status; throw err; }
+        return j;
+      });
+    }, function () {
+      throw new Error("تعذّر الاتصال بـ Netlify (قد يمنعه المتصفح/الشبكة) — حمّل الـ PWA وارفعه عبر app.netlify.com/drop");
+    });
+  }
+  function pollDeploy(token, id, tries) {
+    return nlFetch("/deploys/" + encodeURIComponent(id), token).then(function (d) {
+      if (d && d.state === "ready") return d;
+      if (d && d.state === "error") throw new Error("فشل النشر: " + (d.error_message || "خطأ غير معروف"));
+      if (tries <= 0) throw new Error("استغرق النشر وقتًا طويلًا — تحقق من لوحة Netlify");
+      return new Promise(function (r) { setTimeout(r, window.SULTAN_POLL_MS || 1500); })
+        .then(function () { return pollDeploy(token, id, tries - 1); });
+    });
+  }
+
+  var btnDeploy = document.getElementById("btnDeploy");
+  var statusDeploy = document.getElementById("statusDeploy");
+  var progDeploy = document.getElementById("progDeploy");
+  var deployLink = document.getElementById("deployLink");
+
+  function deployToNetlify() {
+    var token = document.getElementById("nlToken").value.trim();
+    deployLink.classList.remove("on");
+    if (location.protocol === "file:") {
+      setStatus(statusDeploy, "❌ افتح الصفحة عبر https:// أو http://localhost — أو حمّل الـ PWA وارفعه على app.netlify.com/drop", "err");
+      return;
+    }
+    if (!token) { setStatus(statusDeploy, "❌ أدخل Netlify token أولًا", "err"); return; }
+    var cfg;
+    try { cfg = readConfig(false); } catch (e) { setStatus(statusDeploy, "❌ " + e.message, "err"); return; }
+    var siteName = document.getElementById("cfgSiteName").value.trim().toLowerCase();
+    var siteId = document.getElementById("cfgSiteId").value.trim();
+    if (siteName && !/^[a-z0-9]([a-z0-9-]{0,38}[a-z0-9])?$/.test(siteName)) {
+      setStatus(statusDeploy, "❌ اسم الموقع: أحرف إنجليزية صغيرة وأرقام وشرطات فقط", "err"); return;
+    }
+    if (siteId && !/^[A-Za-z0-9-]+$/.test(siteId)) { setStatus(statusDeploy, "❌ Site ID غير صالح", "err"); return; }
+
+    var original = btnDeploy.textContent, zipBlob = null, siteRef = null;
+    btnDeploy.disabled = true; btnDeploy.textContent = "⏳ جاري النشر…";
+    setProgress(progDeploy, 0); setStatus(statusDeploy, "جاري تجهيز الحزمة…");
+
+    ensureJSZip().then(function (ok) {
+      if (!ok) throw new Error("تعذّر تحميل JSZip — تحقق من الاتصال");
+      return buildZipBlob("pwa", cfg, function (pct) { setProgress(progDeploy, pct * 0.4); });
+    }).then(function (blob) {
+      zipBlob = blob;
+      if (siteId) return { id: siteId };
+      setStatus(statusDeploy, "جاري إنشاء الموقع…");
+      return nlFetch("/sites", token, {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(siteName ? { name: siteName } : {})
+      });
+    }).then(function (site) {
+      siteRef = site; setProgress(progDeploy, 55);
+      setStatus(statusDeploy, "جاري رفع الملفات…");
+      return nlFetch("/sites/" + encodeURIComponent(site.id) + "/deploys", token, {
+        method: "POST", headers: { "Content-Type": "application/zip" }, body: zipBlob
+      });
+    }).then(function (dep) {
+      setProgress(progDeploy, 75); setStatus(statusDeploy, "جاري المعالجة…");
+      return pollDeploy(token, dep.id, 40);
+    }).then(function (d) {
+      var url = d.ssl_url || d.url || (siteRef && (siteRef.ssl_url || siteRef.url)) || "";
+      setProgress(progDeploy, 100);
+      setStatus(statusDeploy, "✅ تم النشر بنجاح", "ok");
+      if (url) {
+        deployLink.href = url; deployLink.textContent = url; deployLink.classList.add("on");
+        try { document.getElementById("cfgHost").value = new URL(url).hostname; } catch (e) {}
+      }
+      if (siteRef && siteRef.id) document.getElementById("cfgSiteId").value = siteRef.id;
+      saveSettings();
+      setTimeout(function () { setProgress(progDeploy, 0); }, 2000);
+    })["catch"](function (err) {
+      console.error("[Deploy]", err);
+      setStatus(statusDeploy, "❌ " + (err && err.message ? err.message : "فشل النشر"), "err");
+      setProgress(progDeploy, 0);
+    }).then(function () {
+      btnDeploy.disabled = false; btnDeploy.textContent = original;
+    });
+  }
+  btnDeploy.addEventListener("click", deployToNetlify);
+
+  var btnCheckToken = document.getElementById("btnCheckToken");
+  var tokenStatus = document.getElementById("tokenStatus");
+  btnCheckToken.addEventListener("click", function () {
+    if (location.protocol === "file:") {
+      setStatus(tokenStatus, "❌ افتح الصفحة عبر https:// أو http://localhost", "err");
+      return;
+    }
+    var token = document.getElementById("nlToken").value.trim();
+    if (!token) { setStatus(tokenStatus, "❌ أدخل التوكن أولًا", "err"); return; }
+    var o = btnCheckToken.textContent;
+    btnCheckToken.disabled = true; btnCheckToken.textContent = "…";
+    setStatus(tokenStatus, "جاري الفحص…");
+    nlFetch("/sites", token).then(function (list) {
+      var n = Array.isArray(list) ? list.length : 0;
+      setStatus(tokenStatus, "✅ التوكن صالح — " + n + " موقع في الحساب", "ok");
+    })["catch"](function (err) {
+      setStatus(tokenStatus, "❌ " + (err && err.message ? err.message : "فشل"), "err");
+    }).then(function () {
+      btnCheckToken.disabled = false; btnCheckToken.textContent = o;
+    });
+  });
+
+  els.btnPWA.addEventListener("click", function () {
+    buildAndDownload("pwa", "AlSultan-PWA-Custom.zip", els.btnPWA, els.statusPWA, els.progPWA);
+  });
+  els.btnStore.addEventListener("click", function () {
+    buildAndDownload("store", "AlSultan-Store-Custom.zip", els.btnStore, els.statusStore, els.progStore);
+  });
+
+  function runDiagnostics() {
+    var canvasOk = false;
+    try { canvasOk = !!document.createElement("canvas").getContext("2d"); } catch (e) {}
+    var blobOk = typeof Blob !== "undefined" && typeof URL.createObjectURL === "function";
+    var downloadOk = "download" in document.createElement("a");
+
+    els.diag.innerHTML =
+      '<span class="dot' + (canvasOk ? "" : " bad") + '"></span> Canvas: ' + (canvasOk ? "متاح" : "غير متاح") + '<br>' +
+      '<span class="dot' + (blobOk ? "" : " bad") + '"></span> Blob / ObjectURL: ' + (blobOk ? "متاح" : "غير متاح") + '<br>' +
+      '<span class="dot' + (downloadOk ? "" : " bad") + '"></span> التنزيل التلقائي: ' + (downloadOk ? "مدعوم" : "غير مدعوم");
+
+    if (canvasOk && blobOk && downloadOk) {
+      els.btnPWA.disabled = false;
+      els.btnStore.disabled = false;
+      btnDeploy.disabled = false;
+      setStatus(els.statusPWA, "جاهز — التخصيص يُطبَّق عند الضغط");
+      setStatus(els.statusStore, "جاهز — التخصيص يُطبَّق عند الضغط");
+    } else {
+      setStatus(els.statusPWA, "متصفحك لا يدعم التوليد", "err");
+      setStatus(els.statusStore, "متصفحك لا يدعم التوليد", "err");
+    }
+  }
+  runDiagnostics();
+
+  function runSelfTest() {
+    var passed = 0, failed = 0, results = [];
+    function check(name, fn) {
+      try { fn(); results.push("✅ " + name); passed++; }
+      catch (e) { results.push("❌ " + name + " — " + e.message); failed++; }
+    }
+
+    check("readConfig returns defaults", function () {
+      var c = readConfig(false);
+      if (!c.name) throw new Error("no name");
+      if (!c.services.length) throw new Error("no services");
+    });
+
+    check("no unescaped close tag in generated html", function () {
+      var cfg = readConfig(false);
+      cfg.services[0].title = "<\/script><script>alert(1)<\/script>";
+      var html = generateAppHTML(cfg);
+      var m = html.match(/<\/script>/g);
+      if (!m || m.length !== 1) throw new Error("found " + (m ? m.length : 0));
+    });
+
+    check("normalizeSha handles 64 hex chars", function () {
+      var s = normalizeSha("AA".repeat(32));
+      if (!s || s.split(":").length !== 32) throw new Error("bad format");
+    });
+
+    check("normalizeSha rejects short input", function () {
+      if (normalizeSha("AA") !== null) throw new Error("should be null");
+    });
+
+    check("parseServices parses 4-part line", function () {
+      var s = parseServices("💻 | Test | Desc | f1, f2");
+      if (s.length !== 1) throw new Error("got " + s.length);
+      if (s[0].features.length !== 2) throw new Error("features " + s[0].features.length);
+    });
+
+    check("parseStats caps at 3", function () {
+      var s = parseStats("a | 1\nb | 2\nc | 3\nd | 4");
+      if (s.length !== 3) throw new Error("got " + s.length);
+    });
+
+    check("buildManifest has 10 icons", function () {
+      var m = buildManifest(readConfig(false));
+      if (m.icons.length !== 10) throw new Error("got " + m.icons.length);
+    });
+
+    check("buildAssetLinks uses cfg.pkg", function () {
+      var cfg = readConfig(false);
+      var al = buildAssetLinks(cfg);
+      if (al[0].target.package_name !== cfg.pkg) throw new Error("mismatch");
+    });
+
+    check("escapeHTML neutralizes script tags", function () {
+      if (escapeHTML("<script>").indexOf("&lt;") === -1) throw new Error("not escaped");
+    });
+
+    check("jsonForScript escapes <", function () {
+      if (jsonForScript({ x: "<\/script>" }).indexOf("\\u003c") === -1) throw new Error("not escaped");
+    });
+
+    check("buildSW has unique cache stamp", function () {
+      if (!/pwa-[a-z0-9]+/.test(buildSW())) throw new Error("no stamp");
+    });
+
+    check("generateAppHTML respects lang", function () {
+      var cfg = readConfig(false);
+      cfg.lang = "en"; var en = generateAppHTML(cfg);
+      cfg.lang = "ar"; var ar = generateAppHTML(cfg);
+      if (en.indexOf('dir="ltr"') === -1) throw new Error("en not ltr");
+      if (ar.indexOf('dir="rtl"') === -1) throw new Error("ar not rtl");
+    });
+
+    check("all templates have ar and en", function () {
+      ["tech","restaurant","clinic","store"].forEach(function (k) {
+        if (!TEMPLATES[k].ar) throw new Error(k + " ar");
+        if (!TEMPLATES[k].en) throw new Error(k + " en");
+      });
+    });
+
+    check("all PERSIST ids exist in DOM", function () {
+      PERSIST.forEach(function (id) {
+        if (!document.getElementById(id)) throw new Error("missing: " + id);
+      });
+    });
+
+    var summary = "SELF-TEST: " + passed + "/" + (passed + failed) + " passed";
+    console.log(results.join("\n"));
+    console.log(summary);
+    return { passed: passed, failed: failed, results: results };
+  }
+
+  function warmup() {
+    try { waitForFont(); } catch (e) {}
+    ensureJSZip()["catch"](function () {});
+  }
+  if (document.readyState === "complete") setTimeout(warmup, 400);
+  else window.addEventListener("load", function () { setTimeout(warmup, 400); }, { once: true });
+
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      try { runSelfTest(); } catch (e) { console.error("[SelfTest] crashed:", e); }
+    }, 800);
+  });
+
+})();
+</script>
+</body>
+</html>

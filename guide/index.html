@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدليل التفاعلي — مولّد السلطان تك Enhanced Pro</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050A1A;--panel:#0C1530;--line:rgba(255,255,255,.1);--tx:#E8ECF6;--mut:#8D97B5;--g1:#FFC53D;--g2:#FF8C00}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 15px/1.8 Tajawal,Inter,system-ui,sans-serif}
+.wrap{max-width:820px;margin:0 auto;padding:20px 16px 70px}
+h1{font-size:28px;font-weight:900;margin:8px 0 4px;background:linear-gradient(135deg,var(--g1),var(--g2));-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:19px;margin:0 0 10px}
+h3{font-size:15px;margin:14px 0 4px;color:var(--g1)}
+.sub{color:var(--mut);margin:0 0 16px}
+nav{position:sticky;top:0;z-index:5;background:rgba(5,10,26,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);margin:0 -16px 18px;padding:8px 16px;display:flex;gap:6px;overflow-x:auto}
+nav a{color:var(--mut);text-decoration:none;font-size:13px;white-space:nowrap;padding:4px 12px;border:1px solid var(--line);border-radius:999px}
+nav a.on{color:#1a1000;background:linear-gradient(135deg,var(--g1),var(--g2));border-color:transparent;font-weight:700}
+section{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px}
+ul,ol{margin:6px 0;padding-inline-start:22px}
+code,pre{font-family:Inter,ui-monospace,monospace;direction:ltr}
+code{background:#070E24;border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:13px}
+.cb{position:relative;margin:10px 0}
+pre{margin:0;background:#070E24;border:1px solid var(--line);border-radius:10px;padding:12px;overflow-x:auto;font-size:13px;line-height:1.6;text-align:left}
+.cp{position:absolute;top:6px;left:6px;background:transparent;color:var(--mut);border:1px solid var(--line);border-radius:8px;padding:2px 10px;font:12px Tajawal,sans-serif;cursor:pointer}
+.cp:focus-visible,summary:focus-visible,nav a:focus-visible{outline:2px solid var(--g1);outline-offset:2px}
+.note{border-inline-start:3px solid var(--g1);padding:6px 12px;background:rgba(255,197,61,.07);border-radius:6px;margin:10px 0}
+.warn{border-inline-start-color:#F87171;background:rgba(248,113,113,.07)}
+details{border-bottom:1px solid var(--line);padding:9px 0}
+details:last-child{border:0}
+summary{cursor:pointer;font-weight:700}
+details p{margin:6px 0 0;color:var(--mut)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+td,th{border-bottom:1px solid var(--line);padding:7px 6px;text-align:right;vertical-align:top}
+.tbl{overflow-x:auto}
+#lang{position:absolute;top:20px;left:16px;background:transparent;color:var(--tx);border:1px solid var(--line);border-radius:999px;padding:4px 14px;font:600 13px Inter,sans-serif;cursor:pointer}
+#lang:focus-visible{outline:2px solid var(--g1);outline-offset:2px}
+.wrap{position:relative}
+[hidden]{display:none!important}
+html[dir=ltr] .cp{left:auto;right:6px}
+html[dir=ltr] #lang{left:auto;right:16px}
+html[dir=ltr] td,html[dir=ltr] th{text-align:left}
+.sitenav{display:flex;justify-content:center;gap:8px;margin:0 0 14px;flex-wrap:wrap}
+.sitenav a{color:var(--mut);text-decoration:none;font-size:13px;font-weight:700;padding:6px 14px;border:1px solid var(--line);border-radius:999px}
+.sitenav a:hover{color:var(--g1);border-color:rgba(255,197,61,.4)}
+.sitenav a.on{color:#1a1000;background:linear-gradient(135deg,var(--g1),var(--g2));border-color:transparent}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <button id="lang" type="button" aria-label="Switch language">EN</button>
+  <h1>الدليل التفاعلي</h1>
+  <p class="sub">مولّد حزم السلطان تك — Enhanced Pro <span dir="ltr" style="font-family:Inter">v2.1.0</span></p>
+  <nav class="sitenav" aria-label="التنقل الرئيسي">
+    <a href="../">الرئيسية</a>
+    <a href="../app/">المولّد</a>
+    <a href="./" class="on">الدليل</a>
+    <a href="../support/">الدعم</a>
+  </nav>
+
+  <nav id="nav" aria-label="الأقسام">
+    <a href="#start">البدء</a><a href="#custom">التخصيص</a><a href="#pwa">PWA</a><a href="#store">Store</a><a href="#deploy">النشر</a><a href="#tests">الاختبارات</a><a href="#fix">الأعطال</a><a href="#tips">نصائح</a>
+  </nav>
+
+  <section id="start" data-l="ar">
+    <h2>البدء السريع (30 ثانية)</h2>
+    <ol>
+      <li>افتح <code>/app/</code> عبر <code>https://</code> أو <code>http://localhost</code> (ليس <code>file://</code> إذا أردت النشر المباشر).</li>
+      <li>اضغط F12 ← Console ← يجب أن ترى:
+        <div class="cb"><pre>SELF-TEST: 14/14 passed</pre><button class="cp" type="button">نسخ</button></div></li>
+      <li>عدّل الاسم والواتساب والألوان ثم اضغط <b>معاينة</b> 👁 لترى التطبيق داخل iframe.</li>
+      <li>حمّل حزمة PWA أو Store — جاهزة للسحب إلى Netlify Drop.</li>
+    </ol>
+    <div class="note">كل شيء يعمل محليًا في المتصفح. لا خادم، ولا بيانات تُحفظ خارجيًا.</div>
+  </section>
+
+  <section id="custom" data-l="ar">
+    <h2>التخصيص</h2>
+    <h3>القوالب الجاهزة</h3>
+    <ul><li><b>شركة تقنية</b> — الافتراضي (خدمات IT وبرمجة)</li><li><b>مطعم</b> — قائمة طعام + توصيل + حجز طاولة</li><li><b>عيادة</b> — كشف + أسنان + تحاليل + مواعيد</li><li><b>متجر</b> — منتجات + شحن + إرجاع</li></ul>
+    <p>عند تغيير القالب، إذا عدّلت النصوص يدويًا يظهر تأكيد قبل الاستبدال، والألوان تتغير مع القالب.</p>
+    <h3>الحقول</h3>
+    <div class="tbl"><table>
+      <tr><th>الحقل</th><th>القاعدة</th></tr>
+      <tr><td>الاسم</td><td>حتى 60 حرفًا؛ الحرف الأول يُستخدم للأيقونة إن لم ترفع شعارًا</td></tr>
+      <tr><td>الواتساب</td><td>دولي بدون <code>+</code> مثل <code>213775519021</code>؛ تنظيف تلقائي؛ 8 أرقام حدًا أدنى</td></tr>
+      <tr><td>الشعار</td><td>PNG/JPG حتى 4MB؛ يولّد 10 أيقونات (72→512 + maskable 192 و512)</td></tr>
+      <tr><td>الألوان</td><td>تُطبّق كتدرج <code>linear-gradient(135deg,c1,c2)</code></td></tr>
+      <tr><td>الخدمات</td><td>كل سطر: <code>أيقونة | عنوان | وصف | ميزة1، ميزة2</code> — حتى 12</td></tr>
+      <tr><td>الإحصائيات</td><td>كل سطر: <code>قيمة | وصف</code> — حتى 3 — فارغ للإخفاء</td></tr>
+    </table></div>
+    <div class="note">كل الحقول تُحفظ تلقائيًا في localStorage بمفتاح <code>sultan-gen-v2</code>. زر ↺ يحذف الحفظ. التوكن لا يُحفظ أبدًا.</div>
+  </section>
+
+  <section id="pwa" data-l="ar">
+    <h2>حزمة PWA</h2>
+    <div class="cb"><pre>index.html        (4 تبويبات: الرئيسية، الخدمات، حول، تواصل)
+manifest.json     (10 أيقونات + shortcuts للواتساب والخدمات)
+sw.js             (كاش فريد لكل توليد: pwa-{timestamp})
+icons/            (72,96,128,144,152,192,384,512 + maskable-192,512)
+_headers          (no-cache للـ index/sw/manifest + CORS للـ assetlinks)
+.well-known/assetlinks.json
+README.md</pre><button class="cp" type="button">نسخ</button></div>
+    <p><b>النشر:</b> اسحب المجلد إلى <code>app.netlify.com/drop</code> وانسخ الرابط.</p>
+    <p><b>التثبيت:</b> أندرويد/كروم: القائمة ← Install app. آيفون/سفاري: مشاركة ← Add to Home Screen.</p>
+  </section>
+
+  <section id="store" data-l="ar">
+    <h2>حزمة Store</h2>
+    <ul>
+      <li><code>twa-manifest.json</code> و <code>BUILD-AAB.md</code> و <code>build-aab.sh</code> (صلاحية 755)</li>
+      <li><code>PLAY-LISTING.md</code> و <code>PRIVACY-POLICY-TEMPLATE.md</code></li>
+      <li><code>store-assets/</code>: <code>play-icon-512.png</code> و <code>feature-graphic-1024x500.png</code></li>
+    </ul>
+    <div class="note warn">إن فعّلت Play App Signing، أضف بصمة App signing key من Console ← App integrity بجانب بصمتك. استخدم AAB وليس APK، وأضف لقطتي شاشة على الأقل ورابط سياسة الخصوصية.</div>
+  </section>
+
+  <section id="deploy" data-l="ar">
+    <h2>النشر المباشر إلى Netlify</h2>
+    <ul>
+      <li><b>التوكن:</b> يبدأ بـ <code>nfp_</code> من User settings ← Applications ← Personal access tokens. لا يُحفظ، ويُرسل فقط إلى <code>api.netlify.com</code>. زر «فحص» يستدعي <code>GET /sites</code>.</li>
+      <li><b>اسم الموقع (اختياري):</b> أحرف صغيرة وأرقام وشرطات فقط.</li>
+      <li><b>Site ID:</b> يُملأ بعد أول نشر، والنشر التالي يحدّث الموقع نفسه.</li>
+    </ul>
+    <h3>المسار</h3>
+    <ol>
+      <li>تحميل JSZip (cdnjs ثم unpkg ثم jsdelivr)</li>
+      <li>توليد PWA</li>
+      <li><code>POST /sites</code> إن لم يوجد Site ID</li>
+      <li><code>POST /sites/{id}/deploys</code> مع ZIP</li>
+      <li>استعلام كل 1.5ث حتى <code>state=ready</code> (40 محاولة)</li>
+      <li>عرض الرابط وتحديث حقل Host تلقائيًا</li>
+    </ol>
+    <div class="note warn">عبر <code>file://</code> يفشل الاتصال بـ Netlify بسبب CORS. افتح عبر https أو <code>npx serve .</code></div>
+  </section>
+
+  <section id="tests" data-l="ar">
+    <h2>الأمان والاختبارات</h2>
+    <p><code>runSelfTest()</code> يشغّل 14 اختبارًا بعد 800ms من <code>load</code>: readConfig، normalizeSha، parseServices، parseStats، buildManifest، buildAssetLinks، escapeHTML، jsonForScript، buildSW، generateAppHTML، جدول القوالب، سلامة DOM ids.</p>
+    <h3>الإصلاح الحرج</h3>
+    <p>كل إغلاق script داخل JS يُكتب بشرطة مائلة مسبوقة بشرطة عكسية. في JS تساوي <code>\/</code> نفس <code>/</code> وقت التشغيل، لكن محلل HTML لا يرى الوسم الخام فلا ينتهي البلوك مبكرًا.</p>
+    <div class="cb"><pre>// خطأ: يكسر الصفحة
+s.push('&lt;/script&gt;');
+// صحيح
+s.push('&lt;\/script&gt;');</pre><button class="cp" type="button">نسخ</button></div>
+  </section>
+
+  <section id="fix" data-l="ar">
+    <h2>استكشاف الأعطال</h2>
+    <details><summary>التوكن غير صالح (401)</summary><p>أنشئ توكنًا جديدًا وانسخه كاملًا.</p></details>
+    <details><summary>اسم الموقع محجوز (409/422)</summary><p>جرّب اسمًا آخر.</p></details>
+    <details><summary>الموقع غير منشور</summary><p>انشر مجلد <code>www/</code> أولًا وتأكد أن <code>/manifest.json</code> يفتح.</p></details>
+    <details><summary>شريط العنوان يظهر داخل التطبيق</summary><p>بصمة assetlinks.json لا تطابق مفتاح التوقيع.</p></details>
+    <details><summary>فشل تحميل JSZip</summary><p>تحقق من الإنترنت؛ تُجرَّب 3 شبكات CDN.</p></details>
+    <details><summary>الأيقونات لا تظهر بعد النشر</summary><p>تأكد من رفع مجلد <code>icons/</code>.</p></details>
+  </section>
+
+  <section id="tips" data-l="ar">
+    <h2>نصائح احترافية</h2>
+    <ul>
+      <li>ارفع شعارًا PNG شفافًا للحصول على أيقونات maskable نظيفة.</li>
+      <li>اختر Package ID فريدًا من البداية؛ لا يمكن تغييره بعد النشر.</li>
+      <li>انسخ <code>android.keystore</code> وكلمة المرور خارج المشروع وخارج Git؛ فقدانهما يعني تطبيقًا جديدًا.</li>
+      <li>بعد أي تعديل أعد توليد الحزمة؛ الكاش الجديد يضمن وصول التحديث حتى دون إنترنت.</li>
+    </ul>
+  </section>
+
+  <div id="en" data-l="en" hidden dir="ltr">
+  <section id="start-en"><h2>Quick Start (30 seconds)</h2>
+    <ol><li>Open <code>/app/</code> via <code>https://</code> or <code>http://localhost</code> (not <code>file://</code> for direct deploy).</li>
+    <li>Press F12 → Console and look for: <div class="cb"><pre>SELF-TEST: 14/14 passed</pre><button class="cp" type="button">Copy</button></div></li>
+    <li>Edit name, WhatsApp and colors, then click <b>Preview</b> 👁.</li>
+    <li>Download the PWA or Store bundle — ready for Netlify Drop.</li></ol>
+    <div class="note">Everything runs locally in the browser. No server, no external data storage.</div></section>
+  <section id="custom-en"><h2>Customization</h2>
+    <p><b>Templates:</b> Tech company (default), Restaurant, Clinic, Store. Changing template asks for confirmation if you edited texts; colors follow the template.</p>
+    <div class="tbl"><table>
+    <tr><th>Field</th><th>Rule</th></tr>
+    <tr><td>Name</td><td>Max 60 chars; first letter used for the icon if no logo</td></tr>
+    <tr><td>WhatsApp</td><td>International, no <code>+</code> (e.g. <code>213775519021</code>); min 8 digits</td></tr>
+    <tr><td>Logo</td><td>PNG/JPG up to 4MB; generates 10 icons (72→512 + maskable 192, 512)</td></tr>
+    <tr><td>Colors</td><td>Applied as <code>linear-gradient(135deg,c1,c2)</code></td></tr>
+    <tr><td>Services</td><td>Per line: <code>icon | title | description | feature1, feature2</code> — up to 12</td></tr>
+    <tr><td>Stats</td><td>Per line: <code>value | label</code> — up to 3; empty to hide</td></tr></table></div>
+    <div class="note">Fields auto-save to localStorage key <code>sultan-gen-v2</code>. The token is never saved.</div></section>
+  <section id="pwa-en"><h2>PWA Bundle</h2>
+    <div class="cb"><pre>index.html        (4 tabs: Home, Services, About, Contact)
+manifest.json     (10 icons + shortcuts to WhatsApp &amp; Services)
+sw.js             (unique cache per generation: pwa-{timestamp})
+icons/            (72,96,128,144,152,192,384,512 + maskable-192,512)
+_headers          (no-cache for index/sw/manifest + CORS for assetlinks)
+.well-known/assetlinks.json
+README.md</pre><button class="cp" type="button">Copy</button></div>
+    <p><b>Deploy:</b> drag the folder to <code>app.netlify.com/drop</code>. <b>Install:</b> Android/Chrome → Install app; iPhone/Safari → Share → Add to Home Screen.</p></section>
+  <section id="store-en"><h2>Store Bundle</h2>
+    <ul><li><code>twa-manifest.json</code>, <code>BUILD-AAB.md</code>, <code>build-aab.sh</code> (mode 755)</li>
+    <li><code>PLAY-LISTING.md</code>, <code>PRIVACY-POLICY-TEMPLATE.md</code></li>
+    <li><code>store-assets/</code>: <code>play-icon-512.png</code>, <code>feature-graphic-1024x500.png</code></li></ul>
+    <div class="note warn">With Play App Signing, add the App signing key fingerprint (Console → App integrity). Use AAB, not APK; add 2 phone screenshots and a privacy policy URL.</div></section>
+  <section id="deploy-en"><h2>Direct Deploy to Netlify</h2>
+    <ul><li><b>Token:</b> starts with <code>nfp_</code>; never stored; sent only to <code>api.netlify.com</code>. “Check” calls <code>GET /sites</code>.</li>
+    <li><b>Site name (optional):</b> lowercase letters, digits, dashes.</li>
+    <li><b>Site ID:</b> filled after the first deploy; later deploys update the same site.</li></ul>
+    <ol><li>Load JSZip (cdnjs → unpkg → jsdelivr)</li><li>Generate PWA</li><li><code>POST /sites</code> if no Site ID</li><li><code>POST /sites/{id}/deploys</code> with ZIP</li><li>Poll every 1.5s until <code>state=ready</code> (40 tries)</li><li>Show URL and update Host</li></ol>
+    <div class="note warn">Over <code>file://</code> the Netlify call fails (CORS). Use https or <code>npx serve .</code></div></section>
+  <section id="tests-en"><h2>Security &amp; Tests</h2>
+    <p><code>runSelfTest()</code> runs 14 tests 800ms after <code>load</code>: readConfig, normalizeSha, parseServices, parseStats, buildManifest, buildAssetLinks, escapeHTML, jsonForScript, buildSW, generateAppHTML, template table, DOM id integrity.</p>
+    <h3>Critical fix</h3>
+    <p>Every script-closing tag inside JS is written with an escaped slash. In JS <code>\/</code> equals <code>/</code> at runtime, but the HTML parser never sees a raw closing tag, so the script block survives.</p></section>
+  <section id="fix-en"><h2>Troubleshooting</h2>
+    <details><summary>Token invalid (401)</summary><p>Create a new token and copy it fully.</p></details>
+    <details><summary>Site name taken (409/422)</summary><p>Try another name.</p></details>
+    <details><summary>Site not published</summary><p>Deploy <code>www/</code> first; make sure <code>/manifest.json</code> opens.</p></details>
+    <details><summary>Address bar inside the app</summary><p>The assetlinks.json fingerprint does not match the signing key.</p></details>
+    <details><summary>JSZip load failed</summary><p>Check your connection; 3 CDNs are tried.</p></details>
+    <details><summary>Icons missing after deploy</summary><p>Make sure the <code>icons/</code> folder was uploaded.</p></details></section>
+  <section id="tips-en"><h2>Pro Tips</h2>
+    <ul><li>Upload a transparent PNG logo for clean maskable icons.</li><li>Pick a unique Package ID from day one; it cannot change after publishing.</li>
+    <li>Back up <code>android.keystore</code> and its password outside the project and Git; losing them means a new app.</li>
+    <li>Regenerate the bundle after any edit; the new cache stamp ships the update even offline.</li></ul></section>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var IDS = ["start", "custom", "pwa", "store", "deploy", "tests", "fix", "tips"];
+  var LBL = { ar: ["البدء", "التخصيص", "PWA", "Store", "النشر", "الاختبارات", "الأعطال", "نصائح"], en: ["Start", "Custom", "PWA", "Store", "Deploy", "Tests", "Fixes", "Tips"] };
+  var links = [].slice.call(document.querySelectorAll("#nav a"));
+  var lang = "ar", secs = [];
+  function setLang(l) {
+    lang = l;
+    var h = document.documentElement;
+    h.lang = l; h.dir = l === "ar" ? "rtl" : "ltr";
+    [].forEach.call(document.querySelectorAll('section[data-l="ar"]'), function (n) { n.hidden = l !== "ar"; });
+    document.getElementById("en").hidden = l !== "en";
+    links.forEach(function (a, i) { a.textContent = LBL[l][i]; a.setAttribute("href", "#" + IDS[i] + (l === "en" ? "-en" : "")); });
+    secs = links.map(function (a) { return document.querySelector(a.getAttribute("href")); });
+    var t = document.querySelector("h1"), sb = document.querySelector(".sub");
+    t.textContent = l === "ar" ? "الدليل التفاعلي" : "Interactive Guide";
+    sb.firstChild.textContent = l === "ar" ? "مولّد حزم السلطان تك — Enhanced Pro " : "Sultan Tech Bundle Generator — Enhanced Pro ";
+    document.title = l === "ar" ? "الدليل التفاعلي — مولّد السلطان تك Enhanced Pro" : "Interactive Guide — Sultan Tech Generator Enhanced Pro";
+    document.getElementById("lang").textContent = l === "ar" ? "EN" : "ع";
+    try { localStorage.setItem("sultan-guide-lang", l); } catch (e) {}
+    window.scrollTo(0, 0); mark();
+  }
+  function mark() {
+    var y = window.scrollY + 90, cur = 0;
+    secs.forEach(function (s, i) { if (s && s.offsetTop <= y) cur = i; });
+    links.forEach(function (a, i) { a.classList.toggle("on", i === cur); });
+  }
+  window.addEventListener("scroll", mark, { passive: true });
+  document.getElementById("lang").addEventListener("click", function () { setLang(lang === "ar" ? "en" : "ar"); });
+  [].forEach.call(document.querySelectorAll(".cp"), function (b) {
+    b.addEventListener("click", function () {
+      var t = b.parentNode.querySelector("pre").textContent;
+      if (!navigator.clipboard) return;
+      navigator.clipboard.writeText(t).then(function () {
+        b.textContent = "✓"; setTimeout(function () { b.textContent = lang === "ar" ? "نسخ" : "Copy"; }, 1400);
+      });
+    });
+  });
+  var saved = "ar"; try { saved = localStorage.getItem("sultan-guide-lang") || "ar"; } catch (e) {}
+  setLang(saved === "en" ? "en" : "ar");
+  window.scrollTo(0, 0);
+})();
+</script>
+</body>
+</html>

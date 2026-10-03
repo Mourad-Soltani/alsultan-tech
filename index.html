@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#050A1A">
+<meta name="description" content="تطبيقك الخاص جاهز في دقائق — PWA قابل للتثبيت أو حزمة Google Play. بدون مبرمج، بدون انتظار.">
+<title>السلطان تك — تطبيقك الخاص جاهز في دقائق</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230A1931'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='58' font-weight='900' font-family='system-ui,sans-serif' fill='%23FFC53D'%3E%D8%B3%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#050A1A;--panel:#0C1530;--line:rgba(255,255,255,.1);--tx:#E8ECF6;--mut:#8D97B5;--g1:#FFC53D;--g2:#FF8C00;--ok:#34D399}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 16px/1.7 Tajawal,Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:960px;margin:0 auto;padding:0 18px}
+.top{position:sticky;top:0;z-index:20;background:rgba(5,10,26,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:12px}
+.logo{font-weight:900;font-size:18px;background:linear-gradient(135deg,var(--g1),var(--g2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.top-nav{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.top-nav a,.lang-btn{font-size:13px;font-weight:700;color:var(--mut);padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:transparent;cursor:pointer;font-family:inherit}
+.top-nav a:hover,.lang-btn:hover{color:var(--g1);border-color:rgba(255,197,61,.4)}
+.top-nav a.cta{color:#1a1000;background:linear-gradient(135deg,var(--g1),var(--g2));border-color:transparent}
+.hero{padding:56px 0 40px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(255,197,61,.12),transparent 70%);top:-80px;left:50%;transform:translateX(-50%);pointer-events:none}
+.badge{display:inline-block;font-size:12px;font-weight:700;color:var(--g1);border:1px solid rgba(255,197,61,.35);border-radius:999px;padding:4px 14px;margin-bottom:16px}
+.hero h1{font-size:clamp(26px,5vw,40px);font-weight:900;line-height:1.3;margin:0 0 14px;background:linear-gradient(135deg,var(--g1),var(--g2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lead{max-width:640px;margin:0 auto 28px;color:var(--mut);font-size:16px;font-weight:500}
+.hero-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:14px;font-weight:900;font-size:15px;font-family:inherit;border:0;cursor:pointer}
+.btn-primary{background:linear-gradient(135deg,var(--g1),var(--g2));color:#1a1000}
+.btn-ghost{background:transparent;color:var(--tx);border:1px solid var(--line)}
+.section{padding:36px 0}
+.section h2{text-align:center;font-size:22px;font-weight:900;margin:0 0 8px}
+.section .sub{text-align:center;color:var(--mut);margin:0 0 28px;font-size:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:720px){.grid3{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px}
+.card .ico{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:12px;background:linear-gradient(135deg,rgba(255,197,61,.2),rgba(255,140,0,.15))}
+.card h3{margin:0 0 6px;font-size:16px;font-weight:900}
+.card p{margin:0;color:var(--mut);font-size:14px}
+.pricing{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:780px;margin:0 auto}
+@media(max-width:640px){.pricing{grid-template-columns:1fr}}
+.price-card{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:24px;position:relative;display:flex;flex-direction:column}
+.price-card.featured{border-color:rgba(255,197,61,.45);box-shadow:0 0 0 1px rgba(255,197,61,.15),0 20px 50px rgba(0,0,0,.35)}
+.price-card .tag{position:absolute;top:14px;inset-inline-end:14px;font-size:11px;font-weight:900;color:#1a1000;background:linear-gradient(135deg,var(--g1),var(--g2));border-radius:999px;padding:3px 10px}
+.price-card .name{font-size:13px;font-weight:700;color:var(--g1);margin-bottom:4px}
+.price-card .amount{font-size:32px;font-weight:900;line-height:1.2;margin:0 0 4px}
+.price-card .amount small{font-size:14px;font-weight:700;color:var(--mut)}
+.price-card .desc{color:var(--mut);font-size:13px;margin:0 0 16px}
+.price-card ul{list-style:none;padding:0;margin:0 0 20px;flex:1}
+.price-card li{font-size:14px;padding:7px 0;border-bottom:1px solid var(--line);display:flex;gap:8px;align-items:flex-start}
+.price-card li:last-child{border:0}
+.price-card li::before{content:"✓";color:var(--ok);font-weight:900;flex-shrink:0}
+.price-card .btn{width:100%;margin-top:auto}
+.btn-pwa{background:linear-gradient(90deg,#FFC53D,#FF8C00);color:#1a1000}
+.btn-store{background:linear-gradient(90deg,#60A5FA,#22D3EE);color:#0a1628}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:720px){.steps{grid-template-columns:1fr}}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px;text-align:center}
+.step .n{width:36px;height:36px;border-radius:50%;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px;color:#1a1000;background:linear-gradient(135deg,var(--g1),var(--g2))}
+.step h3{margin:0 0 6px;font-size:15px}
+.step p{margin:0;color:var(--mut);font-size:13px}
+.cta-band{margin:20px 0 40px;background:linear-gradient(135deg,rgba(255,197,61,.12),rgba(255,140,0,.08));border:1px solid rgba(255,197,61,.25);border-radius:22px;padding:32px 20px;text-align:center}
+.cta-band h2{margin:0 0 8px;font-size:22px;font-weight:900}
+.cta-band p{margin:0 0 18px;color:var(--mut);font-size:14px}
+footer{border-top:1px solid var(--line);padding:22px 0;text-align:center;color:var(--mut);font-size:13px}
+footer a{color:var(--g1);font-weight:700}
+footer .links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:8px}
+html[lang="ar"] [data-lang="en"]{display:none!important}
+html[lang="en"] [data-lang="ar"]{display:none!important}
+html[lang="en"] body{font-family:Inter,Tajawal,system-ui,sans-serif}
+html[lang="en"]{direction:ltr}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="logo" href="./">السلطان تك</a>
+    <nav class="top-nav" aria-label="Main">
+      <a href="#pricing" data-lang="ar">الأسعار</a>
+      <a href="#pricing" data-lang="en">Pricing</a>
+      <a href="#how" data-lang="ar">كيف يعمل</a>
+      <a href="#how" data-lang="en">How it works</a>
+      <a href="./guide/" data-lang="ar">الدليل</a>
+      <a href="./guide/" data-lang="en">Guide</a>
+      <a href="./support/" data-lang="ar">الدعم</a>
+      <a href="./support/" data-lang="en">Support</a>
+      <a class="cta" href="./app/" data-lang="ar">افتح المولّد</a>
+      <a class="cta" href="./app/" data-lang="en">Open Generator</a>
+      <button type="button" class="lang-btn" id="langBtn" aria-label="Language">EN</button>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero wrap">
+    <div class="badge">Enhanced Pro · v2.1</div>
+    <h1 data-lang="ar">تطبيقك الخاص جاهز في دقائق<br>بدون مبرمج، بدون انتظار</h1>
+    <h1 data-lang="en">Your own app — ready in minutes<br>No developer. No waiting.</h1>
+    <p class="lead" data-lang="ar">نحوّل نشاطك إلى تطبيق ويب تقدّمي (PWA) يُثبَّت على هاتف عميلك، أو إلى حزمة جاهزة لـ Google Play. اختر القالب والألوان والخدمات — واستلم ملفات جاهزة للنشر مع أيقونات كاملة ودعم ما بعد البيع.</p>
+    <p class="lead" data-lang="en">Turn your business into an installable Progressive Web App, or a ready-to-publish Google Play package. Pick a template, colors, and services — get deploy-ready files, full icons, and after-sales support.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="./app/" data-lang="ar">ابدأ التخصيص الآن ←</a>
+      <a class="btn btn-primary" href="./app/" data-lang="en">Start customizing →</a>
+      <a class="btn btn-ghost" href="#pricing" data-lang="ar">عرض الباقات</a>
+      <a class="btn btn-ghost" href="#pricing" data-lang="en">View packages</a>
+    </div>
+  </section>
+  <section class="section wrap">
+    <h2 data-lang="ar">لماذا السلطان تك؟</h2>
+    <h2 data-lang="en">Why Sultan Tech?</h2>
+    <p class="sub" data-lang="ar">كل ما تحتاجه لإطلاق تطبيق احترافي — من المتصفح مباشرة</p>
+    <p class="sub" data-lang="en">Everything you need to launch a pro app — right from the browser</p>
+    <div class="grid3">
+      <div class="card"><div class="ico">⚡</div>
+        <h3 data-lang="ar">جاهز في دقائق</h3><h3 data-lang="en">Ready in minutes</h3>
+        <p data-lang="ar">لا تنتظر مطوّرًا. خصّص وانشر في نفس الجلسة.</p>
+        <p data-lang="en">No developer queue. Customize and ship in one session.</p>
+      </div>
+      <div class="card"><div class="ico">🎨</div>
+        <h3 data-lang="ar">هويتك بالكامل</h3><h3 data-lang="en">Fully on-brand</h3>
+        <p data-lang="ar">اسم، شعار، ألوان، خدمات، وإحصائيات — عربي أو إنجليزي.</p>
+        <p data-lang="en">Name, logo, colors, services, and stats — Arabic or English.</p>
+      </div>
+      <div class="card"><div class="ico">📦</div>
+        <h3 data-lang="ar">ملفات جاهزة للنشر</h3><h3 data-lang="en">Deploy-ready files</h3>
+        <p data-lang="ar">PWA لـ Netlify، أو حزمة Store لـ Google Play مع دليل البناء.</p>
+        <p data-lang="en">PWA for Netlify, or a Store bundle for Google Play with a build guide.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section wrap" id="pricing">
+    <h2 data-lang="ar">الباقات</h2>
+    <h2 data-lang="en">Packages</h2>
+    <p class="sub" data-lang="ar">اختر ما يناسب مرحلتك — يمكنك الترقية لاحقًا</p>
+    <p class="sub" data-lang="en">Pick what fits your stage — upgrade anytime</p>
+    <div class="pricing">
+      <article class="price-card">
+        <div class="name">PWA</div>
+        <div class="amount">4 900 <small data-lang="ar">دج</small><small data-lang="en">DZD</small></div>
+        <div class="amount" style="font-size:15px;color:var(--mut);font-weight:700;margin-top:-4px">$49</div>
+        <p class="desc" data-lang="ar">تطبيق ويب قابل للتثبيت على أندرويد وآيفون</p>
+        <p class="desc" data-lang="en">Installable web app for Android &amp; iPhone</p>
+        <ul>
+          <li data-lang="ar">تصميم بهويتك (اسم، شعار، ألوان) — عربي أو إنجليزي</li>
+          <li data-lang="en">Your branding (name, logo, colors) — AR or EN</li>
+          <li data-lang="ar">4 صفحات: الرئيسية، الخدمات، من نحن، تواصل</li>
+          <li data-lang="en">4 screens: Home, Services, About, Contact</li>
+          <li data-lang="ar">زر واتساب مباشر + اختصارات سريعة</li>
+          <li data-lang="en">Direct WhatsApp button + shortcuts</li>
+          <li data-lang="ar">يعمل دون إنترنت — والتحديث يصل تلقائيًا</li>
+          <li data-lang="en">Works offline — updates reach users automatically</li>
+          <li data-lang="ar">ملفات جاهزة للسحب إلى Netlify</li>
+          <li data-lang="en">Drop-ready files for Netlify</li>
+        </ul>
+        <a class="btn btn-pwa" href="./app/" data-lang="ar">احصل على PWA</a>
+        <a class="btn btn-pwa" href="./app/" data-lang="en">Get PWA</a>
+      </article>
+      <article class="price-card featured">
+        <span class="tag" data-lang="ar">الأكثر طلبًا</span>
+        <span class="tag" data-lang="en">Most popular</span>
+        <div class="name">Store</div>
+        <div class="amount">9 900 <small data-lang="ar">دج</small><small data-lang="en">DZD</small></div>
+        <div class="amount" style="font-size:15px;color:var(--mut);font-weight:700;margin-top:-4px">$99</div>
+        <p class="desc" data-lang="ar">كل ما في PWA + حزمة النشر على Google Play</p>
+        <p class="desc" data-lang="en">Everything in PWA + Google Play publish kit</p>
+        <ul>
+          <li data-lang="ar">كل مزايا باقة PWA</li>
+          <li data-lang="en">All PWA features included</li>
+          <li data-lang="ar">ملفات TWA و AssetLinks جاهزة</li>
+          <li data-lang="en">TWA + AssetLinks files ready</li>
+          <li data-lang="ar">سكربت بناء AAB + شرح خطوة بخطوة</li>
+          <li data-lang="en">AAB build script + step-by-step guide</li>
+          <li data-lang="ar">قائمة المتجر + نموذج سياسة الخصوصية</li>
+          <li data-lang="en">Play listing + privacy policy template</li>
+          <li data-lang="ar">أيقونة المتجر + صورة واجهة 1024×500</li>
+          <li data-lang="en">Store icon + 1024×500 feature graphic</li>
+        </ul>
+        <a class="btn btn-store" href="./app/" data-lang="ar">احصل على Store</a>
+        <a class="btn btn-store" href="./app/" data-lang="en">Get Store</a>
+      </article>
+    </div>
+  </section>
+  <section class="section wrap" id="how">
+    <h2 data-lang="ar">كيف يعمل؟</h2>
+    <h2 data-lang="en">How it works</h2>
+    <p class="sub" data-lang="ar">ثلاث خطوات — من الفكرة إلى النشر</p>
+    <p class="sub" data-lang="en">Three steps — from idea to live</p>
+    <div class="steps">
+      <div class="step"><div class="n">1</div>
+        <h3 data-lang="ar">خصّص</h3><h3 data-lang="en">Customize</h3>
+        <p data-lang="ar">اختر القالب، الألوان، الخدمات، ورقم واتساب.</p>
+        <p data-lang="en">Pick template, colors, services, and WhatsApp number.</p>
+      </div>
+      <div class="step"><div class="n">2</div>
+        <h3 data-lang="ar">حمّل</h3><h3 data-lang="en">Download</h3>
+        <p data-lang="ar">احصل على حزمة PWA أو Store بأيقونات كاملة.</p>
+        <p data-lang="en">Get a PWA or Store zip with full icon set.</p>
+      </div>
+      <div class="step"><div class="n">3</div>
+        <h3 data-lang="ar">انشر</h3><h3 data-lang="en">Publish</h3>
+        <p data-lang="ar">اسحب إلى Netlify أو اتبع دليل Google Play.</p>
+        <p data-lang="en">Drop on Netlify or follow the Play guide.</p>
+      </div>
+    </div>
+  </section>
+  <div class="wrap">
+    <div class="cta-band">
+      <h2 data-lang="ar">جاهز تطلق تطبيقك؟</h2>
+      <h2 data-lang="en">Ready to launch your app?</h2>
+      <p data-lang="ar">افتح المولّد، خصّص الهوية، وحمّل الحزمة خلال دقائق.</p>
+      <p data-lang="en">Open the generator, set your brand, and download in minutes.</p>
+      <a class="btn btn-primary" href="./app/" data-lang="ar">افتح المولّد الآن</a>
+      <a class="btn btn-primary" href="./app/" data-lang="en">Open the generator</a>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="./app/" data-lang="ar">المولّد</a><a href="./app/" data-lang="en">Generator</a>
+      <a href="./guide/" data-lang="ar">الدليل</a><a href="./guide/" data-lang="en">Guide</a>
+      <a href="./support/" data-lang="ar">الدعم</a><a href="./support/" data-lang="en">Support</a>
+    </div>
+    <div data-lang="ar">© السلطان تك — حلول رقمية من الفكرة إلى الإطلاق</div>
+    <div data-lang="en">© Sultan Tech — digital solutions from idea to launch</div>
+  </div>
+</footer>
+<script>
+(function () {
+  var KEY = "sultan-landing-lang";
+  var btn = document.getElementById("langBtn");
+  function apply(lang) {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === "en" ? "ltr" : "rtl";
+    btn.textContent = lang === "ar" ? "EN" : "ع";
+    try { localStorage.setItem(KEY, lang); } catch (e) {}
+  }
+  var saved = "ar";
+  try { saved = localStorage.getItem(KEY) || "ar"; } catch (e) {}
+  if (saved !== "ar" && saved !== "en") saved = "ar";
+  apply(saved);
+  btn.addEventListener("click", function () {
+    apply(document.documentElement.lang === "ar" ? "en" : "ar");
+  });
+})();
+</script>
+</body>
+</html>
